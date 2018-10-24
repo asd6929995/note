@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+*{margin: 0;
+  padding:0;}
+  ul{list-style:none;}
+  a{text-decoration:none;}
+  body{
+
+    width: 1200px;
+    height: 1200px;
+    background-color:pink;
+}
+/*确定大的盒子*/
+.hz{position: fixed;
+    right: 50px;
+    bottom: 200px;
+    width: 38px;
+    height: 118px;
+}
+/*提取公因式*/
+.xhz{
+    
+    width: 100%;
+    height: 38px;
+    background-repeat:no-repeat;
+    background-position: center;
+    cursor:pointer;
+}
+/*QQ单独的特性编写*/
+.qq{
+    background-color: #6872BA;
+    background-image: url(qq.png);}
+    /*wx单独的特性编写*/
+.wx{
+    background-color:#33AF2D;
+    background-image:url(wx.png);}
+    /*图标单独的特性编写*/
+.up{
+    margin-top: 4px;
+    background-color:#646464;
+    background-image: url(up.png);
+                }
+                /*QQ盒子上的功能公因式编写*/
+.zx{
+   position: relative;
+   display:none;
+   right: 132px;
+   bottom:162px;
+   width: 170px;
+   height: 200px;
+   background-color: yellow;
+   line-height: 40px;
+   background-position: 20px;
+   text-indent: 50px;
+   min-height: 200px;
+
+
+        }
+  /*QQ功能表上的单独项1编写*/
+.Consultation{
+   background-color:#6872BA;
+   text-indent:30px;
+   font-size:15px
+
+        }
+          /*QQ功能表上的单独项2编写*/
+.teacher1{
+   background-color: #E8E8E8;
+   background-image: url(qq2.png);
+   background-position: 20px 12px;
+   background-repeat: no-repeat;
+        }
+          /*QQ功能表上的单独项3编写*/
+.teacher2{
+   background-color: #E8E8E8;
+   background-image: url(qq2.png);
+   background-position: 20px 12px;
+   background-repeat: no-repeat;
+}
+  /*QQ功能表上的单独项4编写*/
+.tell1{
+   background-color: #fff;
+   background-image: url(电话.png);
+   background-position: 20px 12px;
+   background-repeat: no-repeat;
+}
+  /*QQ功能表上的单独项5编写*/
+.tell2{
+   background-color: #fff;
+   text-indent:20px;
+  }
+    /*QQ功能表上的单独项6编写*/
+.lj{color:#fff;
+   font-size:15px;
+ }
+.sm{ position: relative;
+   display:none;
+   right: 120px;
+   bottom: 0px;   
+   width: 120px;
+   height:120px;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-color: #fff;
+  
+
+}
+.qq:hover .zx{
+      display: block;}
+.wx:hover .sm{
+        display:block;
+}
+.teacher1:hover{
+        background-color: #000000;
+        background-image: url(qq.png);
+       color:#fff;
+}
+.teacher2:hover{
+        background-color: #000000;
+        background-image: url(qq.png);
+       color:#fff;
+}
+</style>
+    
+</head>
+<body>
+    <div class="hz">
+      <div class="qq xhz">
+       <ul class="zx">
+        <li class="Consultation"><span style="color:#fff">在线咨询</span>
+        <a href="#" class="lj"  style=" margin-left:50px" >X</a></li>
+        <li class="teacher1">张老师</li>
+        <li class="teacher2">王老师</li>
+        <li class="tell1">联系电话</li>
+        <li class="tell2">0371-55602883</li>
+       </ul>
+        
+        </div>
+        <div class="wx xhz">
+          <div class="wx sm"><img src="QR.png"></div>
+      </div>
+      <div class="up xhz">
+      </div>
+    </div>
+
+
+</body>
+</html>

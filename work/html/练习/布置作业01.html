@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form>
+         <form action ="1" method="post">
+         <fieldset>
+         <legend>账户信息</legend>
+         <span style="color:red">*</span>&nbsp;用户名：<input type="text" name="username"><br>
+         <span style="color:red">*</span>&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="pwd"><br>
+         性别：男<input type="radio" checked="0" name="sex" value="0">
+         女<input type="radio" name="sex" value="1"><br>
+     </fieldset>
+     <fieldset>
+     	<legend>公司信息</legend>
+        公司名称：<input type="text" name="corporatename"><br><br>
+        公司所在地址：<select name="experience">
+        	<option value="a">---请选择---</option> 
+        	<option value="b">北京</option>
+            <option value="c">上海</option>
+            <option value="d" >深圳</option>
+        </select>
+          <select name="experience">
+          	<option value="f">---请选择---</option> 
+        	<option value="g">某市</option>
+            <option value="h">上海</option>
+            <option value="i">深圳</option>
+</select><br><br>
+        购买类型:
+        IT:<input type="checkbox" name="purchase content" value="computer">
+        通讯设备：<input type="checkbox" name="purchase content" value="communication equipment">
+        大家电：<input type="checkbox" name="purchase content" value="household appliances">
+        办公耗材<input type="checkbox" name="office conumables" value="office"><br><br>
+        公司行业:<select name="experience">
+        	<option value="j">IT行业</option> 
+        	<option value="k">计算机软件</option>
+            <option value="l">市场推广</option>
+            <option value="f" >广告</option>
+        </select><br><br>
+        公司介绍：<textarea rows="10" cols="30"></textarea><br><br>
+        营业执照上传：<input type="file" name="file"><br><br>
+        <img src="作业/reg.jpg" alt="无法显示图片">
+     </fieldset>
+      
+	</form>
+</body>
+</html>

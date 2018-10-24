@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>特别策划</title>
+</head>
+<style>
+    body{
+    	font-family:'Regular' '微软雅黑';
+    }
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    a{
+    	text-decoration: none;
+    }
+    ul{
+    	list-style: none;
+    }
+	.header{
+		position: fixed;
+		width: 100%;
+		height: 76px;
+		background-color: #fdfcfc;
+		text-align: center;
+		border-bottom: 2px solid #e9e9e9;
+		z-index:1;
+	}
+	.header .header-content{
+		position: relative;
+		width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+
+	}
+	.header-content .header-menu{
+		position: absolute;
+		right: 0;
+		height: 100%;
+		text-align: right;
+    }
+    .header-content  .menu-option{
+    	display: block;
+    	float: left;
+    	width: 75px;
+    	height: 75px;
+    	text-align: center;
+    	line-height: 75px;
+    	margin-left: 43px;
+    }
+    .header-content  .menu-space.select{
+    	display: block;
+    	width: 75px;
+    	height: 2px;
+ 		background-color: #04e4f8;
+		margin-top:-19px;
+    }
+    .header-content  .menu-space{
+    	display: none;
+    	width: 75px;
+    	height: 2px;
+ 		background-color: #04e4f8;
+		margin-top:-19px;
+    }
+    .header-content  .menu-option.select a{
+    	color:#04e4f8;
+    }
+    .header-content .menu-option  .menu{
+    	display: block;
+    	width: 75px;
+    	height: 75px;
+    	color: #818181;
+    	
+    }
+    .header-content .logo{
+    	width: 130px;
+    	height: 65px;
+    	background-color: red;
+    	float: left;
+    	margin-top:5px;
+    	background: url(img/Plan-logo.png) no-repeat;
+    	background-position:0 18px;
+    }
+    .header-content  .menu-option:hover .menu-space{
+    	display: block;
+	}
+	 .header-menu .menu:hover{
+    	color:#04e4f8;
+
+    }
+    .subnav{
+    	display: none;
+    	width: 84px;
+    	height: 45px;
+    	background-color: #fdfcfd;
+    	margin-left: -5px;
+    	margin-top: 20px;
+    	line-height: 12px;
+    	font-size: 14px;
+    	border-radius:0px 0px 5px 5px;
+    	background-color:rgba(253,252,253,0.8);
+    }
+    .menu-option:hover .subnav{
+    	display: block;
+    } 
+
+    .subnav li{
+    	
+    	margin-top:10px;
+    }
+    .subnav a{
+    	color:#9f9ea0;
+    }
+    
+
+    .subnav >li:hover a{
+    	color:#04e4f8;
+    }
+    
+    .header-content .logo a{
+    	float: left;
+    	width: 130px;
+        height: 65px;
+
+
+    }
+   
+   
+	
+
+
+
+
+
+
+                                    /*标题栏结束*/
+
+
+    .main {
+    	width: 100%;
+    	height: 1669px;
+    	background-color: #ffffff;
+    }
+    .main  .main-layout{
+    	width: 100%;
+    	height: 1193px;
+    	
+    	overflow: hidden;
+
+    }
+    .main-layout .layout-lt{
+        width: 1200px;
+    	height: 1000px;
+    	margin: 0 auto;
+    	margin-top: 171px;
+    }
+    .layout-lt .title{
+    	font-size: 22px;
+    	font-weight: bold;
+    	color: #323232;
+       
+    }
+    .layout-lt .title-en{
+    	font-size: 16px;
+    	color:#bcb7b7;
+ 	}
+ 	.hot{
+
+        
+ 		width: 1200px;
+ 		height:900px;
+ 		margin: 0 auto;
+    	margin-top: 69px;
+    	background-color: #ffffff;
+    }
+
+    .hot .hot-layout{
+      position: relative;
+      float: left;
+      width: 540px;
+      height: 250px;
+      font-size: 14px;
+      color: #b5b5b5;
+      margin-bottom: 69px;
+}
+    .hot-layout .frame{
+      display: none;
+      position: absolute;
+      left: 20px;
+      top:31px;
+      width: 305px;
+      height: 186px;
+      margin: 0 auto;
+      /*background-color: #7d8a94*/;
+      border: 2px solid #04e4f8;
+
+    }
+    .hot .hot-layout .frame.special{
+      display: block;
+      position: absolute;
+      left: 20px;
+      top:31px;
+      width: 305px;
+      height: 186px;
+      margin: 0 auto;
+      /*background-color: #7d8a94*/;
+      border: 2px solid #04e4f8;
+
+    }
+    .hot .hot-layout .shadow.special{
+      display: block;
+      position: absolute;
+      width: 350px;
+      height: 249px;
+      background-color: #7e8a94;
+      opacity: 0.6;
+
+    }
+    .shadow{
+      display: none;
+      position: absolute;
+      width: 350px;
+      height: 249px;
+      background-color: #7e8a94;
+      opacity: 0.5;
+    }
+   
+
+    .hot .hot-layout.hot-layout2{
+      margin-left: 120px;
+
+    }
+   
+    .hot .hot-layout .ly-content{
+    	position: absolute;
+    	left:375px;
+    	top:32px;
+    	line-height: 25px;
+
+     }
+     
+    .ly-content .label-p{
+     	font-size: 16px;
+     	color:#3a3a3a;
+     	font-weight: bold;
+     }
+    .ly-content  .label-mo{
+    	color:#727171;
+    	font-weight: bold;
+     }
+     
+
+     .hot-layout .ly-content span{
+     	color:#949494;
+     	margin: 3.5px;
+     	padding: 1.5px 3.5px;
+     	border:1px solid #b5b5b5;
+
+    }
+    .ly-content span:hover{
+      color:#04e4f8;
+      border:2px solid #04e4f8;
+
+    }
+    .hot .hot-layout a:hover .shadow{
+      display: block;
+    }
+    .hot .hot-layout a:hover .frame{
+      display: block;
+    }
+    
+   
+
+
+    
+    /*                                    中间部分结束*/
+    .joinus{
+    	
+    	width: 100%;
+    	height: 395px;
+    	background-color:#f2f2f2;
+    	margin-top:92px;
+    	
+    }
+    .joinus .joinus-main{
+    	position: relative;
+    	width: 1200px;
+    	height: 100%;
+    	margin: 0 auto;
+
+    }
+    .joinus .publisher{
+    	float: left;
+    	top: 0;
+    	width: 500px;
+    	height: 261px;
+    	margin-top:62px;
+    	font-size: 14px;
+    	color:#999999;
+    	line-height: 34px;
+    }
+    .joinus-up{
+    	position: absolute;
+    	right: 0;
+    	top:83px;
+    	width: 600px;
+    	height: 234px;
+    	line-height:32px; 
+    	font-size: 14px;
+
+    	
+    }
+    .publisher-title{
+    	font-size: 18px;
+    	color:#292828;
+    	margin-bottom: 16px;
+    	font-weight: bold;
+
+    }
+    .publisher img{
+    
+    	margin-right: 21px;
+
+    }
+    
+
+
+    
+    .joinus-main .joinus-up span{
+    	margin-right: 153px;
+    	margin-bottom: 50px;
+    	color:#908f8f;
+    	font-weight: bold;
+
+    }
+
+
+    .joinus-up .fromer-input{
+    	width: 135px;
+    	height: 35px;
+    	margin-right: 50px;
+    	border-style:none none;
+    	background-color:#f2f2f2;
+    	border-bottom: 1px solid #e3e3e3;
+    	padding-bottom: 10px;
+    	outline: none;
+
+    }
+   
+     .fromer .fromer-special{
+    	width: 508px;
+    	height: 35px;	
+    	margin-right: 50px;
+    	border-style:none none;
+    	background-color:#f2f2f2;
+    	border-bottom: 1px solid #e3e3e3;
+    	padding-bottom: 10px;
+    	line-height:25px;
+      outline: none;
+    }
+
+    .fromer .button{
+    	width: 60px;
+    	height: 23px;
+    	color:#e0dcdc;
+    	background-color: #656565;
+      outline: none;
+
+
+    }
+   
+
+    
+    	
+
+
+
+</style>
+<body>
+	<!-- 最上方的标题栏 -->
+   <div class="header">
+   	    <div class="header-content">
+   	    	<div class="logo">
+                  <a href="#" class="logo-option"></a>
+   	    	</div>
+      		<ul class="header-menu">
+      			<li class="menu-option">
+      				<a class="menu" href="#">
+      					首页
+      				</a>
+      						<span class="menu-space">
+      						</span>
+      			</li>
+      			<li class="menu-option select">
+      				<a class="menu" href="#">
+      					特别策划
+      				</a>
+      						<span class="menu-space select">
+      						</span>
+      			</li>
+      			<li class="menu-option">
+      				<a class="menu" href="#">
+      					精品路线
+      				</a>
+      						<span class="menu-space">
+      						</span>
+      							<ul class="subnav">
+      								<li><a href="#">定制团体游</a></li>
+      								<li><a href="#">领队自由行</a></li>
+      							</ul>
+      			</li>
+      			<li class="menu-option">
+      				<a class="menu" href="#">
+      					关于我们
+      				</a>
+      					<span class="menu-space">
+      					</span>
+      					<ul class="subnav">
+      							<li><a href="#">企业介绍</a></li>
+      							<li><a href="#">品牌理念</a></li>
+      							<li><a href="#">合作伙伴</a></li>
+      					</ul>
+      			</li>
+      			<li class="menu-option">
+      				<a class="menu" href="#">
+      					联系我们
+      				</a>
+      					<span class="menu-space">
+      					</span>
+      					<ul class="subnav">
+      							<li><a href="#">在线咨询</a></li>
+      							<li><a href="#">留言板块</a></li>
+      							
+      					</ul>
+      			</li>
+      		</ul>
+      	</div>
+   </div>
+   <!-- 中间内容 -->
+   <div class="main">
+   		<div class="main-layout">
+   			<div class="layout-lt">
+   				
+   				<p class="title">特别策划</p>
+   				<p class="title-en">SPECIAL REPORT</p>
+   				
+   				<ul class="hot">
+   					<li class="hot-layout"> 
+   						   <a href="#">
+                  <span class="shadow special"></span>
+                  <div class="frame special"></div>
+                  <img src="img/云南.jpg" height="249px" width="349px">
+                 </a>
+   						<div class="ly-content">
+   							<p class="label-p">超值特惠云南6日游</p>
+   							<p class="label-mo">￥2380起</p>
+   							<a href="#"><span>摄影</span></a>
+                <a href="#"><span>景区</span></a>
+                <a href="#"><span>酒店</span></a>
+   							<p>往返交通：飞机</p>
+   							<p>行程描述：大理+香格里拉+泸沽湖+苍山洱海</p>
+   							<a class="tourism" href="#"></a>
+   						</div>
+   					</li>
+   					<li  class="hot-layout hot-layout2">
+                <a href="#">
+                    <span class="shadow"></span>
+                    <div class="frame"></div>
+                    <img src="img/成都.jpg" height="249px" width="349px">
+                </a>
+   						<div class="ly-content">
+   							<p class="label-p">成都全程跟团6日游</p>
+   							<p class="label-mo">￥3380起</p>
+   							<a href="#"><span>摄影</span></a>
+   							<a href="#"><span>景区</span></a>
+   							<a href="#"><span>酒店</span></a>
+   							<p>往返交通：飞机</p>
+   							<p>行程描述：太古里+宽窄巷子+锦鲤+武侯祠</p>
+   						</div>
+   					</li>
+					<li  class="hot-layout">
+                <a href="#">
+                    <span class="shadow"></span>
+                    <div class="frame"></div>
+                    <img src="img/青海.jpg" height="249px" width="349px">
+                </a>
+   						<div class="ly-content">
+   							<p class="label-p">青海5晚6日自由行</p>
+   							<p class="label-mo">￥2380起</p>
+   							<a href="#"><span>摄影</span></a>
+                <a href="#"><span>景区</span></a>
+                <a href="#"><span>酒店</span></a>
+   							<p>往返交通：飞机</p>
+   							<p>行程描述：青海湖+茶卡盐湖+敦煌莫高窟+嘉峪关</p>
+   						</div>
+   				</li>
+   					<li  class="hot-layout hot-layout2">
+   						  <a href="#">
+                  <span class="shadow"></span>
+                  <div class="frame"></div>
+                  <img src="img/鼓浪屿.jpg" height="249px" width="349px">
+                </a>
+   						<div class="ly-content">
+   							<p class="label-p">鼓浪屿浪漫跟团游</p>
+   							<p class="label-mo">￥3380起</p>
+   							<a href="#"><span>摄影</span></a>
+                <a href="#"><span>景区</span></a>
+                <a href="#"><span>酒店</span></a>
+   							<p>往返交通：飞机</p>
+   							<p>行程描述：最美转角+龙头路+日光岩</p>
+   						</div>
+   					</li>
+   					<li  class="hot-layout">
+   						<a href="#">
+                  <span class="shadow"></span>
+                  <div class="frame"></div>
+                  <img src="img/西安.jpg" height="249px" width="349px">
+              </a>
+   						<div class="ly-content">
+   							<p class="label-p">西安3晚6日跟团游</p>
+   							<p class="label-mo">￥2380起</p>
+   							<a href="#"><span>摄影</span></a>
+                <a href="#"><span>景区</span></a>
+                <a href="#"><span>酒店</span></a>
+   							<p>往返交通：飞机</p>
+   							<p>行程描述：钟楼+大雁塔+小寨+回民街</p>
+   						</div>
+   					</li>
+   					<li  class="hot-layout hot-layout2">
+   						<a href="#">
+                  <span class="shadow"></span>
+                  <div class="frame"></div>
+                  <img src="img/长白山.jpg" height="249px" width="349px">
+              </a>
+   						<div class="ly-content">
+   							<p class="label-p">长白山天池6日跟团游</p>
+   							<p class="label-mo">￥3380起</p>
+   							<a href="#"><span>摄影</span></a>
+                <a href="#"><span>景区</span></a>
+                <a href="#"><span>酒店</span></a>
+   							<p>往返交通：飞机</p>
+   							<p>行程描述：北坡+温泉+符石林+西坡</p>
+   						</div>
+   					</li>
+   				</ul>
+   				
+   			</div>
+   		</div>
+   		<!-- 尾部内容 -->
+   		<div class="joinus">
+   			<div class="joinus-main">
+
+   				<div class="publisher">
+   					<p class="publisher-title">慢旅Slow Travle工作室</p>
+   					<p>地点：中国河南省郑州市绿地新都汇</p>
+   					<p>邮编：1000000</p>
+   					<p>电话：0392-23656504</p>
+   					<p>邮箱：manlv@qq.com</p>
+   					<a href="#"><img src="img/QQ.png"></a>
+   					<a href="#"><img src="img/微信.png"></a>
+   					<a href="#"><img src="img/微博.png"></a>
+   					<p>COPYRIGHT (©) 2018 mo004_2551 - 生活方式旅游类网站.</p>
+            	</div>
+   				<div class="joinus-up">
+   					<from class="fromer">
+   						<span>姓名</span><span>邮箱</span><span>电话</span><br>
+   						<input  class="fromer-input" type="text" name="username">
+   						<input  class="fromer-input" type="text" name="mailbox">
+   						<input class="fromer-input" type="text" name="telephone"> 
+   						<br>
+   						<span>内容</span>
+   						<br>
+   						<input class="fromer-special" type="text" name="content">
+   						<br>
+   						<input type="submit" class="button" name="submission">
+
+   					</from>
+   				</div>
+   			</div>
+   		</div>
+
+   </div>
+
+
+</body>
+</html>

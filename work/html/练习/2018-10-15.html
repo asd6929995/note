@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+    *{
+    	margin:0;
+    	padding: 0;
+   }
+   body{
+			font: 16px/1.2 Arial,Verdana,"宋体";	
+overflow:scroll;
+overflow-x:hidden;
+overflow-y:hidden;
+}
+   
+    ul{list-style: none;
+   }
+    a{text-decoration: none;
+   }
+   /*头部内容*/
+		.head{
+			width: 100%;
+			height: 80px;
+			/*background-color: pink;*/
+    }
+    .head .head-a{
+    	position:relative;
+        width: 1000px;
+        height: 80px;
+        margin: 0 auto;
+       
+		overflow: hidden;
+    }
+    .head-a1{
+    	    float: left;
+			display: block;
+			width: 170px;
+			height: 60px;
+			margin-top: 10px;
+    }
+    .head .head-a1-1{
+            float: left;
+			display: block;
+			width: 170px;
+			height: 60px;
+		    background: url('logo.png') no-repeat center;
+    }
+    
+    .head .head-a2{float: left;
+    	display: block;
+    	width:95px;
+    	height:23px;
+    	margin-top:37px;
+    	padding-left: 50px;
+    	background: url('logo2.png') no-repeat center;
+    }
+
+    .head .head-a3{
+    	position: absolute;
+        color:#999;
+    	right:-40px;
+    	top: 57px;
+    	width:150px;
+    	height: 18px;
+        background: url(q-icon.png) no-repeat 0 3px ;
+        font-size:12px;
+        padding-left: 20px;
+    }  
+    .head-a3-1{color:#999;}
+    .head-b{
+    	width: 100%;
+    	height: 40px;
+    	background-color:#FFF8F0;
+    	color:#999;
+    	font-size:12px;
+    	text-align: center;
+        line-height: 38px;
+       
+    }
+    .head-b1{
+            text-align: center;
+			background: url(icon-tips.png) no-repeat left;
+			padding: 10px 0;
+			padding-left: 20px;
+    }
+    .head-b2{
+    	 color:black;
+    }
+    .head-a3-1:hover{
+    	color:red;
+    	text-decoration: underline;
+    }
+    .head-b2:hover{
+    	text-decoration: underline;
+    }
+
+ /*中间内容*/
+ .body{
+ 	width: 100%;
+ 	height: 475px;
+ 	background-color: #30004A;
+   
+ }
+.body-a{position: relative;
+	width: 1000px;
+	height: 475px;
+    margin: 0 auto;
+    overflow: hidden;
+background:url(fe8508950b363176.jpg) no-repeat;
+    /*background-color: red;*/
+}
+
+.body-a1{position:absolute;
+	right: 0;
+	bottom: 65px;
+	width: 345px;
+	height: 400px;
+	background-color: #FFFFFF;
+	text-align: center;
+
+}
+.body-a1-1{
+	text-align: center;
+	width: 100%;
+	height: 38px;
+	font-size:12px;
+	color:#9F9F9E;
+    background-color:#FFF8F0;
+	line-height: 38px;
+   }
+.body-a1-2{
+	  background: url(icon-tips.png) no-repeat;
+		padding: 1px 0px;
+			padding-left: 20px;
+
+}
+.body-a1-3,.body-a1-4{
+	float: left;
+	width: 50%;
+	height: 55px;	
+	text-align: center;
+/*	background-color: pink;
+*/	font-family: '微软雅黑';
+	font-size: 18px;
+
+}
+.body-3-b1{display: block;
+
+	margin: 10px 0;
+	width: 171px;
+	height: 40px;
+	
+}
+.body-3-b1{
+	width: 172px;
+	border-right: 1px solid #f0f0f0;
+}
+.body-3-b2{
+    
+	margin: 10px 0;
+	width: 172px;
+	height: 40px;
+}
+.body-3-b1,.body-3-b2{
+	color: #666666;
+}
+ .body-3-b2,.body-3-b1:hover {display: block;
+	color:red;
+	font-weight:bold;
+}
+.body-a1-5{float: left;
+	width: 100%;
+	height: 33px;
+/*	background-color: red;
+*/	
+}
+.body-a1-5{
+	width: 100%;
+	border-top: 1px solid #f0f0f0;
+}
+/*登录页面*/
+.body-b1{float: left;
+	width: 100%;
+	height:160px;
+	/*background-color: pink;*/
+}
+.body-dl1,.body-dl2{
+	width:305px;
+	height: 38px;
+	/*background-color: yellow;*/
+	margin: 0 auto;
+    overflow: hidden;
+    border:1px solid #e5e5e5;
+
+}
+.body-dl2{
+	position:relative;
+	right: 0;
+	top:20px;
+}
+.username1,.password1{
+	float: left;
+	display: block;
+    width: 38px;
+	height: 38px;
+	background-color:#F4F4F4;
+	border-right:1px solid #e5e5e5;
+    }
+.username1{
+	background: url(pwd-icons-new.png);
+	background-position: 0 1;
+}
+.password1{
+	background: url(pwd-icons-new.png);
+	background-position:-48px 0;
+}
+.body-dl1 input{
+
+	outline:none;
+    border: 0px;
+   
+}
+.body-dl2 input{
+	outline:none;
+    border: 0px;
+
+}
+
+.wjmm1{
+    float: right;
+    right: 50px;
+    text-align: right;
+    margin-top:30px;
+	width:305px;
+	height: 38px;
+	padding-right:  22px;
+}
+.wjmm2{
+	color:#666666;
+}
+.wjmm2:hover{
+	color:red;
+}
+.login input{
+	color:#fff;
+	background-color: red;
+	width: 300px;
+	height: 33px;
+	font-size: 19px;
+	cursor: pointer;
+    border: 0.5px;
+}
+.kb{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.qq1
+{
+    float: left;
+	width: 70px;
+	height: 100%;
+	font-size: 12px;
+	/*background-color: pink;*/
+
+}
+.wx{
+    float: left;
+	width: 100px;
+	height: 100%;
+	font-size: 12px;
+	/*background-color: pink;*/
+
+}
+
+.qq2{ position: relative;
+	left: 20px;
+	bottom:-10px;
+      width: 19px;
+      height: 19px;
+      background-color: pink;
+      background-position:right;
+}
+.wx2{position: relative;
+	left: 20px;
+	bottom:-10px;
+      width: 19px;
+      height: 19px;
+      background-color: pink;
+      background-position:right;
+}
+.qqdlx{position: relative;
+	bottom:8px;
+	padding: 20px;
+	padding-left:25px;
+		 color:black;
+
+
+}
+.qq2{
+	background: url(QQ-weixin.png) no-repeat;
+}
+.wx2{
+	background:url(QQ-weixin.png) no-repeat;
+	background-position:-19px;
+
+}
+
+.wx3{position: relative;
+     left: 10px;
+	 bottom: 17px;
+	 color:black;
+
+
+
+}
+.xhx{position: relative;
+    right: 20px;
+    bottom:11px;
+	margin:0 8px;
+	font-size:1px;
+}
+.ljzy1{position: relative;
+	right: 20px;
+	bottom:2px;
+	float: right;
+	font-size: 15px;
+	width: 77px;
+	height: 54px;
+	/*background-color: pink;*/
+
+}
+.ljzy2{position: relative;
+	  bottom:11px;
+	   color:#B61D1D;
+    
+  
+}
+
+.tbkz{position: relative;
+	right: 10px;
+    top: 15px;
+	width: 16px;
+	height: 16px;
+	/*background-color: red;*/
+}
+.tbkz{background: url(pwd-icons-new.png) no-repeat -104px -75px
+	;}
+
+	/*结尾部分*/
+
+.zhjw{
+	width: 100%;
+    height: 163px;
+   /* background-color: red;*/
+
+}
+.jw1{float: left;
+
+    width:100%;
+    height: 40px;
+    text-align: center;
+    font-size: 13px;
+
+    margin: 20px;
+    padding: 10px;
+}
+.jw1 a{
+	 color:#666666;
+}
+.jw1 a:hover{
+	color:red;
+	text-decoration: underline;
+
+}
+.jw1 span{
+    margin: 0 8px;
+    font-size: 5px;
+}
+.jw2{margin: 10px 0;
+	width: 250px;
+	height: 10px;
+	text-align: center;
+	background-position: center;
+}
+.p1{
+	margin: 10px 0;
+}
+.ljzy2:hover{
+	color:red;
+	text-decoration: underline
+}
+.wx3:hover{
+	color:red;
+	text-decoration: underline
+}
+.qqdlx:hover{
+	color:red;
+	text-decoration: underline
+}
+
+
+	</style>
+
+
+</head>
+<body>
+	<!-- 头部内容 -->
+	<div class="head">
+		<div class="head-a">
+			<div class="head-a1">
+				<a href="#" class="head-a1-1"></a>
+			</div>
+			<div class="head-a2">
+				
+			</div>
+			<div class="head-a3">
+				<a href="#" class="head-a3-1">
+			登录页面，调查问题</a>
+		</div>
+		</div>
+	</div>
+    <div class="head-b"><span class="head-b1"><!-- <img src="icon-tips.png"> -->依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版 <a href="#" class="head-b2">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</span>
+    </div>
+    <!-- 中间内容 -->
+    <div class="body">
+    	<div class="body-a">
+    		<div class="body-a1">
+    			<div class="body-a1-1"><span class="body-a1-2">京东不会以任何理由要求您转账汇款，谨防诈骗。</span>
+        <div>
+    				   <div class="body-a1-3">
+    					  <a href="#" class="body-3-b1">扫码登录</a>
+            </div>
+    		               <div class="body-a1-4">
+    		 	               <a href="#" class="body-3-b2">账户登录</a>
+                </div>
+    				              <div class="body-a1-5">
+    </div>
+    <!-- 登录页面 -->
+    <div class="body-b1"> 
+    	<!-- 表单 -->
+        <form>
+            <div class="body-dl1">
+                     	<label for="loginname"  class="username1"></label>
+                     	<input type="text" id="loginname"  type="text" name="username" style="padding-right: 80px"  placeholder="邮箱/密码/已验证手机">
+            </div>
+
+                <div class="body-dl2">
+                     <label for="nloginpwd"  class="password1"></label>
+                     	<input id="nloginpwd" type="password"  name="password" style="padding-right: 80px" placeholder="密码">
+                </div>
+                    
+                <div class="wjmm1"><a href="#" class="wjmm2">忘记密码</a>
+                </div>
+
+    </div>
+                    <div class="login">
+                     	<input type="submit" value="登     录">
+                    </div> 
+
+        </form>
+                    <div class="kb">
+                    	
+                    </div>
+                        <div class="qq1">
+                   	    <div class="qq2">
+                   		<a href="#" class="qqdlx">QQ</a><span class="xhx">|</span>
+                  
+                    </div>
+
+                        <div class="qq3">
+                        	
+                    </div>
+                    </div>
+                    <div class="wx">
+                    	<div class="wx2"></div>
+                    	<a href="#" class="wx3">微信</a>
+              </div> 
+              <div class="ljzy1">
+              	<div class="tbkz"></div>
+                 <a href="#" class="ljzy2">立即注册</a>
+              </div>
+<!-- 结尾部分 -->
+                    <div class="jlzc1"></div>
+                    <div class="ljzc2"></div>
+                    </div>
+            </div>
+    	</div>
+    </div>
+</div>
+    <div class="zhjw">
+    	<div class="jw1">
+    		<a href="#">关于我们
+    		</a><span>|</span><a href="#">联系我们
+    		</a><span>|</span><a href="#">人才招聘
+    		</a><span>|</span><a href="#">商家入驻
+    		</a><span>|</span><a href="#">广告服务
+    		</a><span>|</span> <a href="#">手机京东
+    		</a><span>|</span><a href="#">友情链接
+    		</a><span>|</span><a href="#">销售联盟
+    		</a><span>|</span><a href="#">京东社区
+    		</a><span>|</span><a href="#">京东公益
+    		</a><span>|</span><a href="#">English Site</a>
+    		<p class="p1" style="color:#666666">Copyright © 2004-2018  京东JD.com 版权所有</p>
+    	</div>
+    	
+    </div>
+
+</body>
+</html>

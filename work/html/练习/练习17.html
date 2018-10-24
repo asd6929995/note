@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*去掉默认样式*/
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: pink;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+
+		.zx{
+			position: fixed;
+			right: 50px;
+			bottom: 200px;
+			width: 38px;
+			height: 118px;
+			background-color: pink;
+		}
+		/*提取公因式*/
+		/*.zx .qq,
+		.zx .wx,
+		.zx .go-top{
+			width: 100%;
+			height: 38px;
+		}*/
+		.zx .zx-type{
+			width: 100%;
+			height: 38px;
+			background-repeat: no-repeat;
+			background-position: center;
+			/*获取鼠标悬浮是 改变为手*/
+			/*defalut(默认)|pointer|move*/
+			cursor: pointer;
+		}
+		.zx .qq{
+			background-color: #6872BA;
+			background-image: url(qq.png);
+		}
+		.zx .wx{
+			background-color: #33AF2D;
+			background-image: url(wx.png);
+		}
+		.zx .go-top{
+			margin-top: 4px;
+			background-color: #646464;
+			background-image: url(up.png);
+		}
+		/*注意: 不要直接写.qq;*/
+		.zx .qq{
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+		.zx .qq-detail{
+			display: none;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 170px;
+			/*height: */
+			min-height: 200px;
+			background-color: green;
+			/*半透明*/
+			/*opacity 透明度 0~1*/
+			/*rgba和opacity区别? rgba单独指的是背景颜色透明度,而opacity整个元素的透明度*/
+			/*opacity: .5;*/
+		}
+		/*注意: xx:hover yy{} 只能用于后代元素或者兄弟节点元素;*/
+		.zx .qq:hover .qq-detail{
+			display: block;
+		}
+		.zx .zx-title{
+			position: relative;
+			width: 100%;
+			height: 40px;
+			background-color: #6872BA;
+			color:#fff;
+			font-size: 14px;
+			line-height: 40px;
+			/*文本缩进20px*/
+			text-indent: 20px;
+		}
+		.zx .zx-title .close{
+			position: absolute;
+			right: 20px;
+			top: 11px;
+			display: block;
+			width: 18px;
+			height: 18px;
+			font-size: 16px;
+			text-align: center;
+			line-height: 18px;
+			font-weight: bolder;
+			color: #fff;
+			/*避免父类文本缩进样式对自己的影响*/
+			text-indent: 0;
+			/*css3的动画*/
+			transition: all ease .4s;
+		}
+		/*css3动画 演示 无需掌握*/
+		.zx .zx-title .close:hover{
+			transform: rotate(360deg);
+		}
+		/*即使是后代选择器  一般也只用三层选择*/
+		.zx .qq-detail .item{
+			width: 100%;
+			height: 40px;
+			font-size: 14px;
+			color: #333;
+			line-height: 40px;
+			text-indent: 50px;
+			background-repeat: no-repeat;
+			background-position: 20px;
+		}
+		.zx .qq-detail .teacher1{
+			background-color: #E8E8E8;
+		}
+		.zx .qq-detail .teacher2{
+			background-color: #F3F3F3;
+		}
+		.zx .qq-detail .teacher1,
+		.zx .qq-detail .teacher2{
+			background-image: url(img/item-qq.png);
+		}
+		.zx .tel{
+			background-color: #fff;
+			background-image: url(img/tel.png);
+		}
+		.zx .qq-detail .tel-number{
+			text-indent: 20px;
+			line-height: 30px;
+			background-color: #fff;
+		}
+		.zx .qq-detail .teacher1:hover,
+		.zx .qq-detail .teacher2:hover{
+			color:#fff;
+			background-color: #000;
+			background-image: url(img/qq.png);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="zx">
+		<div class="qq zx-type">
+			<ul class="qq-detail">
+				<li class="zx-title">
+						在线咨询
+						<a href="#" class="close">X</a>
+				</li>
+				<li class="teacher1 item">张老师</li>
+				<li class="teacher2 item">王老师</li>
+				<li class="tel item">联系电话</li>
+				<li class="tel-number item">0371-55602883</li>
+			</ul>
+			
+		</div>
+		<div class="wx zx-type">
+			
+		</div>
+		<div class="go-top zx-type">
+			
+		</div>
+	</div>
+
+	<!-- <a href="#">asdf</a> -->
+</body>
+</html>

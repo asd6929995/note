@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>昌隆科技网站-首页</title>
+</head>
+    <style>
+    body{
+    	font-family:'微软雅黑';
+    }
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    ul{
+    	list-style: none;
+    }
+    a{
+    	text-decoration: none;
+    }
+    
+    	/*头部部分选择器*/
+    .header{
+    	width: 100%;
+    	height: 135px;
+    }
+    .header .header-b{
+    	width: 100%;
+    	height: 37px;
+    	background-color:#2e3139;
+    }
+    .header .header-top{
+    	position: relative;
+    	width: 1000px;
+        height: 100%;
+        background-color:#2e3139;
+        margin: 0 auto;
+        font-size: 14px;
+        color: #919191;
+        line-height: 37px;
+
+    }
+    .header .header-button{
+    	position: absolute;
+    	right:0;
+    	top:0;
+        width: 150px;
+    	height: 100%;
+        color:#919191;
+    }
+    .header .header-button a{
+    	color:#919191;
+    }
+    .header .header-button .division{
+
+    	margin: 15px;
+    }
+    .header .header-button a:hover{
+    	color:red;
+    	text-decoration: underline;
+    }
+    .header .header-c{
+    	position: relative;
+    	width: 100%;
+    	height: 98px;
+    	background-color:#f2f2f2;
+    	
+    }
+    .header .header-c .header-lg{
+    	position: relative;
+        width: 1000px;
+    	height: 100%;
+    	background-color:#f2f2f2;
+    	background: url(img/logo.png) no-repeat 0 22px;
+    	background-size: 180px 57px;
+        margin: 0 auto;
+        padding-top: 10px;
+        
+    }
+    .header .header-lg .logo{
+    	display: block;
+    	width: 180px;
+    	height: 57px;
+        padding-top:10px;
+        margin-top:20px;
+    }
+    .label-head{
+    	position: absolute;
+    	right: 0;
+    	bottom: 0;
+    	height: 100%;
+    	
+
+    }
+    .label-head-content{
+    	float: left;
+    	text-align: center;
+    	height: 100%;
+    	width: 68px;
+    	margin-left: 48px;
+        color: #5a5a5a;
+
+    }
+   
+    .header-lg .label-head a{
+    	display: block;
+        font-weight:bold;
+        font-size: 16px;
+    	width: 70px;
+    	height: 100%;
+    	text-align: center;
+    	line-height: 98px;
+        color:#5a5a5a;
+    }
+    
+
+    .label-head .under-line.select1{
+
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #1669ad;
+        text-align: center;
+        margin-top:-43px;
+    }  
+    .label-head a{
+        color:#5a5a5a;
+    }
+    .select{
+        color:#2765a4;
+    }
+    /*.header-lg .label-head .label-head-content .select a{
+        color:#5a5a5a;
+    }*/
+    .header-lg .label-head .label-head-content.active a{
+    	color:#03579e;
+    }
+  
+    .label-head .label-head-content:hover a{
+    	color:#03579e;
+    }
+  
+
+
+   /*展示栏*/
+   .column{
+   	width: 100%;
+   	height: 400px;
+   	margin: 0 auto;
+   	overflow: hidden;
+   }
+    .column1{
+    	display:block;
+    	width: 100%;
+    	height: 400px;
+        background:url(img/column-picture2-1.jpg) no-repeat;
+    	background-position: center ;
+    }
+    .column2{
+    	display:none;
+    	width: 100%;
+    	height: 400px;
+    	background:url(img/column-picture2-2.jpg) no-repeat;
+    	background-position: center ;
+    }
+    .picture{
+    	position: relative;
+    	width: 1000px;
+    	height: 100%;
+    	margin: 0 auto;
+   
+    }
+    .picture .bt1{
+    	position: absolute;
+    	left: 0;
+    	bottom: 20px; 
+    	width: 24px;
+    	height: 4px;
+    	
+
+    }
+    .picture .bt2{
+    	position: absolute;
+    	left: 30px;
+    	bottom: 20px; 
+    	width: 24px;
+    	height: 4px;
+    	
+    }
+    /*产品展示部分*/
+    .primary-coverage{
+    	width: 100%;
+    	height: 830px;
+    	background-color: #f2f2f2;
+    }
+    .products{
+    	position: relative;
+        width: 1000px;
+        height: 67px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+        border-bottom:2px solid #ffffff;
+
+    }
+    .products .products-top1{
+    	position: absolute;
+    	left: 0;
+    	bottom: 10px;
+    	text-align:left;
+    	left: 15px;
+    	color:#5a5a5a;
+        font-weight:bold;
+    }
+    .square{
+    	position: absolute;
+    	left: 0;
+    	bottom: 12px;
+    	width: 6px;
+    	height: 16px;
+    	background-color: #11589d;
+    }
+    .square span{
+    	position: absolute;
+    	float: left;
+    	left: 0;
+    	bottom: 6px;
+        width: 6px;
+        height: 4px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+    }
+    .products .products-top2{
+    	position: absolute;
+    	left: 107px;
+    	bottom: 10px;
+    	font-size: 11px;
+    	font-weight:bold;
+    	color:#8a8a8a;
+
+    }
+    .more{
+    	position: absolute;  
+    	right:0px;
+    	top: 41px;
+    	width: 51px;
+    	height: 23px;
+    	/*background-color:#e8e8e8;*/
+    	
+
+    }
+    .primary-picture{
+    	width: 1010px;
+    	height: 255px;
+    	margin: 0 auto;
+    	overflow:hidden;
+    	color:#888888;
+    	font-size: 15px;
+
+    
+    }
+.primary-photo{
+        float: left;
+        margin: 4px;
+        border: 5px solid #ffffff;
+        margin-top:17px;
+}
+.primary-explain1{
+	margin:20px;
+}
+.primary-explain2{
+	margin:65px;
+}
+.primary-explain3{
+    margin: 99px;
+}
+.primary-explain4{
+    margin:105px;
+}
+.products2{
+	position: relative;
+	right: 0;
+	bottom:20px;
+	width: 1000px;
+	height: 42px;
+	margin: 0 auto;
+	border-bottom:2px solid #ffffff;
+}
+.products-top3{
+	    position: absolute;
+    	left: 0;
+    	bottom: 10px;
+    	text-align:left;
+    	left: 15px;
+    	color:#5a5a5a;
+        font-weight:bold;
+}
+.products-top4{
+	    position: absolute;
+    	left: 107px;
+    	bottom: 10px;
+    	font-size: 11px;
+    	font-weight:bold;
+    	color:#8a8a8a;
+}
+.more2{
+	    position: absolute;  
+    	right:0px;
+    	top: 10px;
+    	width: 51px;
+    	height: 23px;
+    	/*background-color:#efefef;*/
+}
+.square2{
+        position: absolute;
+    	left: 0;
+    	bottom: 12px;
+    	width: 6px;
+    	height: 16px;
+    	background-color: #11589d;
+}
+.square2 span{
+	    position: absolute;
+    	float: left;
+    	left: 0;
+    	bottom: 6px;
+        width: 6px;
+        height: 4px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+}
+.intermediate-picture{
+	    position: relative;
+	    bottom:20px;
+        width: 1000px;
+        height: 245px;
+        margin: 0 auto;
+
+        text-indent: 2em;
+}
+.intermediate-picture .title{
+        text-indent:0;
+        font-size: 17px;
+        color: #3a3a3a;
+        font-weight:bold;
+}
+.intermediate-picture .title2{
+	    font-size: 14px;
+	    color: #6d6d6d;
+	    line-height:25px;
+	    text-indent: 35px;
+
+}
+.written-words{
+	position: absolute;
+	top:18px;
+	width: 675px;
+	height: 164px;
+    margin-left:325px;
+    
+}
+.Ending-content{
+	position: relative;
+	bottom:27px;
+	width: 1000px;
+	height: 234px;/*
+	background-color: yellow;*/
+	margin: 0 auto;
+}
+.products3{
+	float: left;
+	width: 300px;
+	height: 27px;
+	margin:0 auto;
+	border-bottom:2px solid #ffffff;
+}
+.products-top5{
+	    position: absolute;
+    	left: 0;
+    	top: 0;
+    	text-align:left;
+    	left: 15px;
+    	color:#5a5a5a;
+        font-weight:bold;
+}
+.products-top6{
+	    position: absolute;
+    	left: 107px;
+    	top: 5px;
+    	font-size: 11px;
+    	font-weight:bold;
+    	color:#8a8a8a;
+}
+.products-top7{
+	    position: absolute;
+    	left: 20px;
+    	top: 0;
+    	color:#5a5a5a;
+        font-weight:bold;
+}
+.products-top8{
+	    position: absolute;
+    	left: 127px;
+    	top: 5px;
+    	font-size: 11px;
+    	color:#818181;
+        font-weight:bold;
+}
+.more3{
+	    position: absolute;  
+    	right:0px;
+    	top: 0;
+    	width: 51px;
+    	height: 23px;
+    	/*background-color:#e8e8e8;*/
+    	
+}
+.products4{
+	    position: absolute;
+        left:327px;
+        top:0;
+		width:673px;
+		height: 27px;
+		margin:0 auto;
+		border-bottom:2px solid #ffffff;
+}
+.square3{
+        position: absolute;
+    	left: 0;
+    	top:3px;
+    	width: 6px;
+    	height: 16px;
+    	background-color: #11589d;
+}
+.square3 span{
+	    position: absolute;
+    	float: left;
+    	left: 0;
+    	bottom: 6px;
+        width: 6px;
+        height: 4px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+}
+.square4{
+        position: absolute;
+    	left: 0;
+    	top:3px;
+    	width: 6px;
+    	height: 16px;
+    	background-color: #11589d;
+}
+.square4 span{
+	    position: absolute;
+    	float: left;
+    	left: 0;
+    	bottom: 6px;
+        width: 6px;
+        height: 4px;
+        background-color: #f2f2f2;
+        margin: 0 auto;
+}
+.contact{
+	position: absolute;
+	left: 0;
+	top: 44px;
+	font-size: 15px;
+	line-height: 30px;
+	color:#888888;
+}
+.contact span{
+	margin: 10px;
+}
+
+.news{
+	float: left;
+	margin-top: 43px;
+	font-size: 15px;
+	line-height: 30px;
+}
+.news a{
+	color:#888888;
+}
+.news span{
+	position: absolute;
+	right: 0;
+	float: right;
+}
+.jw{
+	position: relative;
+	bottom:20px;
+	width: 100%;
+	height: 205px;
+	background-color: #2e3139;
+	text-align: center;
+	font-size: 14px;
+	color:#bbbfcb;
+	line-height: 36px;
+	padding-top: 45px;
+}
+.jw-a a{
+	color:#bbbfcb;
+}
+.jw span{
+	margin: 10px;
+}
+.fixed-window{
+
+	position: fixed;
+	right:134px; 
+	top:509px;
+	width: 141px;
+	height: 181px;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+.qq-consultation{
+    margin:23px;
+	width: 95px;
+	height: 59px;
+/*	background-color: yellow;*/
+	font-size: 16px;
+	font-weight:bold;
+}
+.qq-cn{
+	position: absolute;
+	left: 25px;
+	top:16px;
+	width: 95px;
+	height: 16px;
+}
+.qq-consultation img{
+	position: absolute;
+	top:31px;
+	width: 95px;
+	height: 34px;
+}
+.qq-consultation a{
+	display: block;
+	position: absolute;
+	left: 20px;
+	top:16px;
+	width: 105px;
+	height: 68px;
+	
+}
+.call{
+	position: absolute;
+	left: 0;
+	top:92px;
+	width: 100%;
+	height: 20px;
+	background:url(img/primary7.png) no-repeat;
+	background-position: center;
+}
+.number{
+	padding-top:12px; 
+	text-align: center;
+	font-size: 15px;
+	line-height: 30px;
+}
+.more a,.more2 a,.more3 a{
+    color:#767676;
+}
+.more:hover{
+    color:red;
+}
+.moer2:hover{
+    color:red;
+}
+.more3:hover{
+    color:red;
+}
+.jw-a :hover{
+	color:red;
+}
+.news a:hover{
+	color:red;
+}
+
+
+
+    </style>
+    
+<body>
+	 <!-- 头部部分 -->
+	<div class="header">
+		<div class="header-b">
+		    <div class="header-top">
+			        <p>欢迎莅临河南省巩义市昌隆精化有限公司！</p>
+			    <div class="header-button">
+                    <a href="#">收藏本站</a><span class="division">|</span><a href="#">设为首页</a>
+			    </div>
+		    </div>
+		</div>
+		<div class="header-c">
+			<div class="header-lg">
+                <a href="#" class="logo"></a>
+                    <ul class="label-head">
+                	    <li class="label-head-content active "><a href="#">首页</a><span class="under-line select1"></span></li>
+                	    <li class="label-head-content"><a href="#">公司简介</a><span class="under-line"></span></li>
+                	    <li class="label-head-content"><a href="#">产品中心</a><span class="under-line"></span></li>
+                	    <li class="label-head-content"><a href="#">新闻动态</a><span class="under-line"></span></li>
+                	    <li class="label-head-content"><a href="#">诚聘英才</a><span class="under-line"></span></li>
+                	    <li class="label-head-content"><a href="#">联系我们</a><span class="under-line"></span></li>
+                	        
+                    </ul>
+                    
+			</div>
+			
+		</div>
+	</div>
+	<!-- 展示部分 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-->
+    <div class="column">    
+    	<div class="column1">	
+    	    <div class="column2">	
+    	       <!--  <div class="picture1"><a href="column1"></a> </div>
+    	        <div class="picture2"><a href="column2"></a> </div> -->
+    	        
+			<ul class="arrs">
+				<li class="arr-item active"><a href="#"></a></li>
+				<li class="arr-item"><a href="#"></a></li>
+			</ul>
+
+    	    </div>
+    	</div> 
+    </div>
+    <!-- 产品部分 -->
+    <div class="primary-coverage">
+    	<div class="products">
+    		<div class="square"><span></span></div>
+    	    <span class="products-top1">产品中心</span><span class="products-top2">PRODUCTS</span><div class="gz1">
+    	    <a href="#" class="more">more></a></div>
+        </div> 
+        <div class="primary-picture">
+        	<img class="primary-photo" src="img/primary1.jpg">
+        	<img class="primary-photo" src="img/primary2.jpg">
+        	<img class="primary-photo" src="img/primary3.jpg">
+        	<img class="primary-photo" src="img/primary4.jpg"><span class="primary-explain1"></span>
+        	速溶硅酸钠/粉状硅酸钠水<span class="primary-explain2"></span>
+        	玻璃固体<span class="primary-explain3"></span>
+        	硅酸钠<span class="primary-explain4"></span>
+        	硅溶胶
+        </div>
+        <div class="products2">
+        	<div class="square2"><span></span></div>
+    	    <span class="products-top3">公司简介</span><span class="products-top4">COMPANY PROFILE</span><div class="gz2">
+    	    <a href="#" class="more2">more></a></div>
+        </div>
+        <div class="intermediate-picture">
+        	<img class="primary-photo" src="img/primary5.jpg" style="float: left;">
+        		<div class="written-words">
+
+        			<p class="title">河南省巩义市昌隆精化有限公司</p>
+
+        			<p class="title2">巩义市昌隆精化有限公司位于人杰地灵的杜甫故里巩义市，成立于1999年，经过近17年的不懈努力,我们已成为国内最专业的硅酸钠类产品生产厂家，郑州地区居同行业之首。</p>
+            
+            		<p class="title2">公司主要生产固体、液体、粉状、钾钠等多种规格的泡花碱，其中年生产固体2万吨以上，液体5万吨速溶硅酸钠千余吨，并可根据用户需要生产特殊规格的泡花碱。我们以稳定的产品质量、优质的服务赢得了广大客户的信赖和支持，产品畅销全国以及世界各个国家和地区。公司在立足国内市场的同时，积极开拓国际市场。目前产品已销往东南亚、欧洲等国家和地区。公司愿与有志之士协同合作，互利共赢！</p>
+                </div>
+        </div>
+        <div class="Ending-content">
+        	<div class="products3">
+        		<div class="square3"><span></span></div>
+    	    		<span class="products-top5">联系我们</span><span class="products-top6">CONTACT US</span>
+    	    		<ul class="contact">
+    	    			<li>电话:<span></span>0371-4124378</li>
+    	    			<li>手机:<span></span>13598855556（李经理）</li>
+    	    			<li>传真:<span></span>010-80210483</li>
+    	    			<li>邮箱:<span></span>clhg@163.com</li>
+    	    			<li>地址:<span></span>河南省巩义市北山口汽车南站200米</li>
+    	    		</ul>	
+            </div>		
+
+            <div class="products4">
+    	    	<div class="square4"><span></span></div>
+    	    	    <span class="products-top7">新闻动态</span><span class="products-top8">COMPANY NEWS</span>
+    	    		    <div class="gz3"><a href="#" class="more3">more></a></div>
+          <!-- 新闻介绍 -->
+				
+                <ul class="news">
+                	<li><a href="#">生产固体泡花碱销售前景如何<span>2016-07-05</span></a></li>
+                	<li><a href="#">水玻璃的化学成分密度模数对水玻璃的性能有什么影响<span>2016-11-19</span></a></li>
+                	<li><a href="#">昌隆泡花碱告知你硅酸钠水溶液的技术指标<span>2016-07-05</span></a></li>
+                	<li><a href="#">生产固体泡花碱销售前景如何<span>2016-07-05</span></a></li>
+                	<li><a href="#">生产固体泡花碱销售前景如何<span>2016-07-05</span></a></li>
+							
+				</ul>
+
+            </div>
+        </div>
+    	<div class="jw">
+    		<div class="jw-a">
+    		<a href="#">公司介绍</a><span>|</span>
+    		<a href="#">产品中心</a><span>|</span>
+    		<a href="#">网站新闻</a><span>|</span>
+    		<a href="#">留言系统</a><span>|</span>
+    		<a href="#">联系我们</a><span>|</span>
+    		<a href="#">网站地图</a><span>|</span>
+    	    </div>
+    	    <div class="jw-b">
+    	    	河南省巩义市昌隆精化有限公司<span></span>公司地址：巩义市北山口汽车站南200米<span></span>   手机：13598855556
+    	    </div>
+    	    <div class="jw-c">
+    	    	电话：0371-64124378<span></span>
+    	    	邮编：450000<span></span>    
+    	    	邮箱：gychanglong@163.com<span></span>
+    	    	网址：http://www.clphj.com 
+    	    </div>
+    	    <div class="jw-d">
+    	    	豫ICP备12013179号-1
+    	    </div>
+        </div>
+    </div>
+    <div class="fixed-window">
+    	<div class="qq-consultation">
+            
+    		<div class="qq-cn">
+    		    <span>点击QQ咨询</span>
+    		</div>
+    		    <a href="#">
+    		    <img src="img/primary6.png"></a>
+
+    	</div>
+    	<div class="call">
+
+    	</div>
+    	<div class="number">
+    		0371-4124378
+    		13598855556
+    	</div>
+
+    </div>
+    
+
+</body>
+</html>
