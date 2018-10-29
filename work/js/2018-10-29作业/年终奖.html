@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var year=parseInt(prompt('请输入工龄年限'));
+		var wages=parseInt(prompt('请输入月薪'));
+		var coefficient=1;
+		if (year<1) {
+			if (wages<8000) {
+				coefficient=1;
+			}else {
+				coefficient=1.2
+			}
+		}
+		if (year<2) {
+			if (wages<10000) {
+				coefficient=1.5;
+			}else {
+				coefficient=1.7;
+			}
+		}
+		if (year>2) {
+			if (wages<15000) {
+				coefficient=3;
+			}else {
+				coefficient=3.2;
+			}
+		}
+		alert('您的年终奖合计为：'+(wages+wages*coefficient));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var type= parseFloat(prompt('请输入一个数字:'));
+		// 第一次编写
+		// var remainder1=type%5;
+		// var remainder2=type%6;
+		// if(remainder1==0){
+		// 	if (remainder2==0) {
+		// 		alert('这个数字能同时被5和6整除');
+		// 	}else if(remainder2>0){
+		// 		alert('这个数字能被5整除，但是不能被6整除');
+		// 	}
+		// }
+		// if(remainder2==0){
+		// 	if(remainder1==0){
+		// 		alert('这个数字能同时被5和6整除');
+		// 	}else if(remainder1>0){
+		// 		alert('这个数字能被6整除，但是不能被5整除');
+		// 	}
+		// }
+		// if(remainder1>0){
+		// 	if (remainder2>0) {
+		// 		alert('这个数字不能被6整除，也不能被5整除');
+		// 	}
+		// }
+		// 第二次编写
+		if (type%5==0&&type%6==0) {
+			alert('这个数字能同时被5和6整除');
+		}
+		else if (type%5==0&&type%6>0) {
+			alert('这个数字能被5整除，但是不能被6整除');
+		}else if(type%5>0&&type%6==0){
+			alert('这个数字能被6整除，不能被5整除');
+		}else{
+			alert('这个数字不能被6整除，也不能被5整除');
+		}
+		// if 如果什么达成，就执行什么。else 如果不满足条件则执行。else if如果不满足父类if 满足子类if则实行XX。
+		// if 可以看成是一个框,（else if）是父级if的子类。（else）继承父类的所有子类进行判定。
+	
+		
+
+
+	</script>
+
+
+
+</head>
+<body>
+	
+</body>
+</html>
