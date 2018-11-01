@@ -4,18 +4,17 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script>
+		
 		var type=parseFloat(prompt('请输入一个数字'));
-		var a=1;
-
-		for (var i =1; i <=type; i++){
-			if (type>100) {
-				alert('您输入的数值超出计算范围，请重新输入。');
-				break;
-			} 
-			a*=i;
-			alert(a);
+		var a=[];
+		for (var i =0; i<=type; i++) {
+			if (type%i==0) {
+			console.log(i);
+			a.push(i);
+			}
 		}
-	
+		alert('用户输入： '+type+'此时输出'+a+'共'+a.length+' 个数字');
+		
 	</script>
 </head>
 <body>

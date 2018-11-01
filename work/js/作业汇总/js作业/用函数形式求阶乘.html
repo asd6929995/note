@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	var type=parseFloat(prompt('请输入一个数字'));
+	
+		if(type>100){
+			alert(
+				'您输入的数值超出计算范围，请重新输入。'
+				)
+		}
+			else{
+				var c=factorial(type);
+				alert('该数值的阶乘为:'+c);
+			}
+
+			function factorial(b){
+				var a=1;
+				var b='';
+				for (var i =1; i <=type; i++){
+						b+='*'+i;
+						a*=i;
+				}
+				b= b.substr(1);
+				return b+'='+a;
+
+			}
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

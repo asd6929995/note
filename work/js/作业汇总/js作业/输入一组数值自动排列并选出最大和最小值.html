@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var type=parseFloat(prompt('请输入需要排列的数字个数'));
+		console.log('输入的个数：'+type);
+		var a=[];
+		for (var i =1; i<=type; i++) {
+			if (i<=type) {
+				var b=parseFloat(prompt('请输入第：'+i+'个数字'));
+				a.push(b);
+			}
+		}
+		console.log('输入的数字：'+a);
+		long(a);
+		function long(asd){
+			for (var j =0 ; j<a.length-1; j++){
+				var c=j;
+				for (var h = j+1; h<a.length; h++){
+						if (a[c]>a[h]){
+							c=h;
+						}
+				}
+				if (c!=j) {
+					var d =a[j];
+					a[j]=a[c];
+					a[c]=d;
+				}
+				console.log('最小下标位置为==>'+c);
+				console.log(a);
+				
+			}
+		}
+			console.log('======最终结果======');
+			console.log(a);
+			alert('输入的个数为：'+type+'个'+' '+'输入的数字排序为：'+a+' '+'最大值是：'+a.pop()+' '+'最小值是：'+a.shift());
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -5,23 +5,20 @@
 	<title>Document</title>
 	<script>
 		var type=parseFloat(prompt('请输入一个数字'));
-		var a=[];
-		for (var i = 0; i <=type; i++) {
-			if(type%i==0){
-				a.push(i);
+		var a=1;
+		if(type>100){
+			alert(
+				'您输入的数值超出计算范围，请重新输入。'
+				);
+		}else{
+		for (var i =1; i <=type; i++){
+			a*=i;
 			}
+			alert(a)
 		}
 
-		if (a.length==2) {
-				alert('数字是质数');
-			}else{
-				alert('数字不是质数');
-			}
+		
 			
-
-
-
-
 	</script>
 </head>
 <body>

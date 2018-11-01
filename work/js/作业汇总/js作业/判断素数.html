@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var type=parseFloat(prompt('请输入一个数'));
+		var b=prime(type);
+		alert(b);
+		function prime(type){
+			var d=0;
+			for (var i = 1; i <=type; i++) {
+				if (type>1 && type%i==0) {
+					d++;
+				}
+			}
+			if (d==2) {
+					var a='这个数是质数';
+				}else{
+					var c='这个数不是质数';
+				}
+			
+			return a||c;
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

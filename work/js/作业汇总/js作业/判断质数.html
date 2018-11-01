@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// var type=parseFloat(prompt('请输入一个数字'));
+		// var a=[];
+		// for (var i = 0; i <=type; i++) {
+		// 	if(type%i==0){
+		// 		a.push(i);
+		// 	}
+		// }
+
+		// if (a.length==2) {
+		// 		alert('数字是质数');
+		// 	}else{
+		// 		alert('数字不是质数');
+		// 	}
+  //       var a=0;
+		// for (var i = 0; i <=type; i++) {
+		// 	if(type%i==0){
+		// 		a++;
+		// 	}
+		// }
+		// if (a>2) {
+		// 		alert('数字不是质数');
+		// 	}else{
+		//  		alert('数字是质数');
+		// 	}
+		var type=parseFloat(prompt('请输入一个数字'));
+		var a= true;
+		for (var i = 2; i <type; i++) {
+			if (type%i==0) {
+				a=false;
+				break;
+			}
+		}
+		alert((a?'是质数':'不是质数'));
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

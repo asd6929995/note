@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var type=parseFloat(prompt('请输入一个数'));
+		var d=factorial(type);
+		alert(d);
+		function factorial(type){
+			var a='';
+			var b=1;
+			var c=0;
+			for (var i =1; i <=type; i++) {
+				a=a+'+'+i+'!';
+				b*=i;
+				c+=b;
+
+				
+			}
+			a=a.substr(1);
+			return a+'='+c
+
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
