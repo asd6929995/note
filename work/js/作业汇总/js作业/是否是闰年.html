@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var months = [31,28,31,30,31,30,31,31,30,31,30,31];
+		var type=prompt('请输入一个日期,格式 yyyy-mm-dd');
+		
+		var  myDate = new Date(type);
+	alert(type+'为当年的第'+days(type)+'天');
+	
+
+		function days(date){
+			var date = new Date(type);
+			console.log(date);
+			var year =date.getFullYear();
+			var month=date.getMonth()+1;
+			var day = date.getDate();
+				
+				var AB=0;
+				for (var i =1; i <month; i++) {
+					AB+=months[i-1];
+				
+				
+			}	
+			AB += day;
+
+				if(month>2){
+				if(isRun(date)){
+							AB+=1;
+						}
+				
+
+				}	
+				return AB;
+		}
+
+		function isRun (date) {
+			var year=date.getFullYear();
+			return (year%4==0 && year%100!=0)||year%400==0;
+		
+		}	
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

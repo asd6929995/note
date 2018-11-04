@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 接受数组和字符串取出该数组中所有该字符串的下标
+		
+		var eNameArr = ['zhangsan','machale','john','scott','john','john'];
+		console.log(eNameArr);
+		var e=['john','zhangsan'];
+
+		eNameArr.asd=function (){
+			var d=[];
+			 
+			for (var i = 0; i<eNameArr.length; i++) {
+				for (var j =0; j <e.length; j++) {
+					if (eNameArr[i]==e[j]) {
+						d.push(i);
+					}
+				}
+				var c=d;
+			}return c
+		}
+		var sss=eNameArr.asd(e);
+		console.log(sss);
+
+
+
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

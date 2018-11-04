@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 3.找到数组中每个字母出现的次数["c","a","z","a","a"] 
+		// var arr=["c","a","z","a","a"];
+		// var arr=["c","a","z","a","a","a","b"];
+		  	
+		var arr=["c","a","z","a","a"];
+		
+		function asd(zzz){
+			var abb = [];
+			var acc=[];
+			var aaa=[]
+			for (var i = 0; i <zzz.length; i++) {
+				if (abb.indexOf(zzz[i])==-1) {
+					abb.push(zzz[i]);
+					acc.push(1);
+				}else{
+					var index = abb.indexOf(zzz[i]);
+					acc[index]++;
+				}
+					}
+			for (var j =0; j<abb.length ; j++) {
+			aaa.push(abb[j]+":"+acc[j]);
+
+			}return aaa
+		}	
+
+var asq=asd(arr);
+console.log(asq);
+
+
+		
+
+
+
+	</script>
+				
+</head>
+<body>
+	
+</body>
+</html>

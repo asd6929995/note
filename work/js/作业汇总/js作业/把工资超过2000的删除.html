@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 4.工资的数组[1500,1200,2000,2100,1800],把工资超过2000的删除
+		var arr=[1500,1200,2000,2100,1800,5000,3000];	
+		var brr=mon(arr);
+		console.log(brr);
+		function mon(arr){
+			var value=[];
+			for (var i =0 ; i<arr.length; i++) {
+				if (arr[i]<2000) {
+					value.push(arr[i]);
+				}
+			}return value;
+		}
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

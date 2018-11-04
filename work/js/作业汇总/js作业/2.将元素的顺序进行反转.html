@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 2.将一个字符串数组的元素的顺序进行反转。
+		// ["a","b","c","d"] ["d","c","b","a"]。使用两种种方式实现。
+		var arr=["a","b","c","d"] ;
+		console.log(arr.reverse());
+		// ==============================================
+		brr(arr);
+		console.log(arr);
+		function brr(a){
+			b=[];
+			for (var i =0; i<a.length; i++) {
+				if (a[i]>a[i-1]) {
+					b.push(a);
+				}
+			}return b
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
