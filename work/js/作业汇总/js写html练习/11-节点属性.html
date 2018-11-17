@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+.danger{
+	color:red;
+}
+</style>
+
+</head>
+
+<body>
+	<h1 class="title" id="title1" > buasdasdsada</h1>
+	<h2>qwqdqwe</h2>
+	<button class="btn">删除</button>
+	<script>
+		var h2=document.getElementsByTagName('h2')[0];
+		var btn=document.getElementsByClassName('btn')[0];
+		var h1=document.getElementsByClassName('title')[0];
+		h2.onclick=function(){
+			h2.setAttribute("class","danger");
+		}
+		btn.onclick=function(){
+			h2.removeAttribute('class');
+
+		}
+
+		h1.onclick=function(){
+			var classStr=this.getAttribute('class');
+			var idStr=this.getAttribute('id');
+			console.log(classStr);
+			console.log(idStr);
+		}
+	</script>
+</body>
+</html>

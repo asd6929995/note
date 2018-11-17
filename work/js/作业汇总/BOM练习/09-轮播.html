@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			position: relative;
+			width: 400px;
+			height: 260px;
+			border: 1px solid red;
+			margin: 100px auto;
+			overflow: hidden;
+		}
+		.box .imgs{
+			list-style: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 400%;
+			height: 100%;
+		}
+		.box .imgs li{
+			float: left;
+			width: 400px;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+		}
+		.box .imgs li img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="imgs">
+			<li><img src="img/m1.jpg" alt=""></li>
+			<li><img src="img/pro-m1.png" alt=""></li>
+			<li><img src="img/pro-m2.png" alt=""></li>
+			<li><img src="img/tv-3.png" alt=""></li>
+		</ul>
+	</div>
+	<button class="btn1">开启动画</button>
+	
+<script>
+	var uls=document.getElementsByClassName('imgs')[0];
+	
+	var btn1=document.getElementsByClassName('btn1')[0];
+	
+	var liw=uls.children[0].offsetWidth;
+	var lis=uls.children;
+	console.log(liw);
+	// var num=-1*lis*(uls.children.length-1);
+	
+	var timer=null;
+	var timer2=null;
+	var count=0
+	btn1.onclick=function(){
+		clearInterval(timer2)
+		timer2=setInterval(function(){
+				count++;
+				if (count==lis.length) {
+					count=0;
+					uls.style.left=0;
+				}else{
+					var nums=-1 * count * liw;
+					automatic(uls,nums);
+				}
+					console.log(count+'次开始...'+new Date().getSeconds());
+			},3000);
+		 
+	}
+
+
+
+	function automatic(el,date){
+		clearInterval(timer);
+		timer=setInterval(
+			function(){	
+			var step=date>el.offsetLeft? 5:-5;
+			el.style.left=(el.offsetLeft+step)+'px';
+			var cha=date-el.offsetLeft;
+			if (Math.abs(cha)<Math.abs(step)) {
+				el.style.left=date+'px';
+				clearInterval(timer);
+			}
+
+			},17)
+	
+	}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<div class="box">
+	</div>
+	<button class="btn">删除img2图片</button>
+	<button class="btn2">clone box</button>
+	<script>
+		var boxDiv=document.getElementsByClassName('box')[0];
+		var btn=document.getElementsByClassName('btn')[0];
+		var btn2=document.getElementsByClassName('btn2')[0];
+		var pEle=document.createElement('p');
+
+		pEle.innerText='shuangysakdhkjas';
+		var img=document.createElement('img');
+		var img2=document.createElement('img');
+		img.src='img/fbb.jpg';
+		img2.src='img/fbb.jpg';
+		boxDiv.appendChild(pEle);
+		boxDiv.appendChild(img);
+		//为什么图片跑<P>上边去了
+		boxDiv.insertBefore(img2,pEle);
+		console.log(boxDiv);
+		btn.onclick=function(){
+			img2.parentNode.removeChild(img2);
+		}
+		btn2.onclick=function(){
+			 var scriptEle=document.getElementsByTagName('script')[0];
+			 var newBox=boxDiv.cloneNode(true);
+			 document.body.insertBefore(newBox,scriptEle);
+		}
+	</script>
+</body>
+</html>

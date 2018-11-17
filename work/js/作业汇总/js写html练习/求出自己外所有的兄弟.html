@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<ul>
+	<li class="li1">li_1</li>
+	<li class="li2">li_2</li>
+	<li class="li3">li_3</li>
+	<li class="li4">li_4</li>
+	<li class="li5">li_5</li>
+	<li class="li6">li_6</li>
+	</ul>
+	<script>
+	var liNode=document.getElementsByClassName('li4')[0];
+	var asd=getsiblings(liNode);
+	console.log(asd);
+
+	function getsiblings(el){
+	var rs=[];
+	var ul1=el.parentNode;
+		
+	var lis=ul1.children;
+	
+	for (var i = 0; i <lis.length; i++) {
+			if (lis[i].nodeType ==1) {
+				if(lis[i]!=el){
+					rs.push(lis[i]);
+				}
+			}
+		}
+		return rs;
+	}
+	
+	
+
+
+	</script>
+</body>
+</html>

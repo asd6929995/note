@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小米商城-小米MIX 3丶小米8丶红米6 Pro丶小米电视官方网站</title>
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<script src="js/commodity.js"></script>
+	<script src="js/util.js"></script>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	.header{
+		width: 100%;
+		height: 40px;
+		background-color:#333;
+		
+	}
+	.header .header-layout{
+		position: relative;
+		width: 1226px;	
+		height: 100%;
+		background-color: #333;
+		margin: 0 auto;
+	}
+	.header .header-layout .layout-left{
+		width: 600px;
+		height: 100%;
+
+	}
+	.header .header-layout .layout-left a:hover{
+		color:#fff;
+	}
+	.header .header-layout .layout-right{
+		position: absolute;
+		right: 147px;
+		top:0;
+	}
+	.header .header-layout .layout-right a:hover{
+		color:#fff;
+	}
+	.header .header-layout .layout-alone{
+		position:absolute;
+		right: 0;
+		top:0;
+		width: 120px;
+		height: 100%;
+		text-align: center;
+		background-color: #424242;
+	}
+	.layout-alone a,
+	.header-layout .layout-left a,
+	.layout-right a{
+		display: block;
+		float: left;
+		height: 100%;
+		font-size: 10px;
+		line-height: 40px;
+		color:#b0b0b0;
+	}
+	.header-layout .layout-left span,.layout-right span{
+		display: block;
+		float: left;
+		margin:0px 6px 0px 6px ;
+		font-size: 10px;
+		line-height: 40px;
+		color:#424242;
+	}
+	.header-layout .layout-alone a{
+		width: 100%;
+		height: 100%;
+		
+	}
+	.header-layout .layout-alone .fa{
+		position: relative;
+		left: -5px;
+		top:1px;
+		font-size: 16px;
+		
+	}
+	.headerSection {
+		position: relative;
+		width: 1226px;
+		height: 100px;
+		margin: 0 auto;
+	}
+	.headerSection .logo-s{
+		float: left;
+		margin-top:20px;
+		width: 55px;
+		height:55px;
+		background:url(img/mi-logo.png) no-repeat;
+		background-color:#FF6700;
+		background-position: center;
+
+	}
+	.headerSection  .logo-m{
+		
+		float: left;
+		margin-left: 18px;
+		width: 165px;
+		height: 100%;
+		background:url(img/mi-logow.gif) no-repeat;
+		background-position: center;	
+	}
+	.headerSection .headerSection-menu {
+		float: left;
+		font-size: 16px;
+		line-height: 76px;
+	}
+	
+	.slide-bar{
+		position: absolute;
+		display:none;
+		width: 100%;
+		height: 230px;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		border: 1px solid #333;	
+		z-index: 20;
+		background-color: #fff;
+		
+	}
+
+	.headerSection-menu:hover.slide-box.active{
+		display: block;
+	}
+	.slide-bar.active,
+	.slide-bar:hover{
+		display: block;
+	}
+
+	.headerSection .headerSection-menu a{
+		float: left;
+		display: block;
+		margin:12px 0 0 20px;
+		height: 88px;
+		color:#333333;
+		
+	}
+	.headerSection .headerSection-menu a:hover{
+		color:#ff6700;
+	}
+	.headerSection .headerSection-right{
+		position: absolute;
+		right: 0;
+		top:25px;
+		width: 293px;
+		height: 48px;
+		line-height: 46px;
+		border: 1px solid #C2C2C2;
+	}
+	.headerSection-right .magnifier{
+		float: right;
+		width: 50px;
+		height: 48px;
+		border-left:  1px solid #C2C2C2;
+		text-align: center;
+	}
+	.headerSection-right .textInput{
+		position: relative;
+		height: 40px;
+		width:220px;
+		text-indent: 1em;
+		border: none;
+		outline:none;
+		font-size: 18px;
+	}
+	.headerSection-right .magnifier .fa{
+		font-size:18px;
+		color:#616161;
+	}
+	.headerSection-right .magnifier a{
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.headerSection-right .inside-text1,.inside-text2{
+		position: absolute;
+		right: 140px;
+		top:0px;
+		background-color: #EEEEEE;
+		margin-top:13px;
+		height: 13px;
+		color:#757575;
+		padding: 5px;
+		font-size: 10px;
+		line-height: 13px;
+	}
+	.headerSection-right .inside-text2{
+		position: absolute;
+		right: 60px;
+		top:0px;
+	}
+	.inside-text1:hover{
+		background-color:#ff6700;
+		color:#fff;
+	}
+	.inside-text2:hover{
+		background-color:#ff6700;
+		color:#fff;
+	}
+	
+	.headerSection-right:hover{
+		border-color: #333	;
+	}
+	.headerSection-right:hover.headerSection-right .magnifier{
+		border-color: #333	;
+	}
+	.headerSection-right .magnifier:hover{
+		background-color: #ff6700;
+
+	}
+	.headerSection-right .magnifier:hover .fa{
+		color:#fff;
+	}
+
+	.down{
+		float: left;
+
+		width: 200px;
+		height: 200px;
+		margin-top:50px;
+
+		
+	}
+	.down-0{
+		margin-left: 170px;
+	}
+	.down a{
+		display: block;
+		height: 100px;
+		width: 200px;
+		border-right: 1px solid #333;
+	}
+	.down-5 a{
+		border-right: none;
+	}
+
+	.main{
+		position: relative;
+		width:1226px;
+		height: 460px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	.main .main-box{
+		width:6130px;
+		height: 460px;
+		margin: 0 auto;
+	}
+
+	.main .main-picture{
+		
+		width:1226px;
+		height: 100%;
+		
+		
+	}
+	.arrow-left-nav{
+		display: block;
+		position: absolute;
+		left: 234px;
+		top: 0;
+		width: 991px;
+		height: 100%;
+
+		background-color: pink;
+		
+	}
+	.arrow-left-nav .active,
+	.arrow-left-nav:hover{
+		display: block;
+	}
+	.main .arrow-left{
+		position: absolute;
+		left: 234px;
+		top: 191.5px;
+		text-align: center;
+		line-height: 69px;
+		font-size: 35px;
+	}
+
+	.main .arrow-right{
+		position:absolute;
+		right: 0;
+		top:191.5px;
+		text-align: center;
+		line-height: 69px;
+		font-size: 35px;
+		
+	}
+	.arrow-left a,
+	.main .arrow-right a{
+		display: block;
+		width: 41px;
+		height: 69px;
+		color:#757575;
+	}
+	.main .arrow-right:hover a{
+		background-color:#333;
+		background:rgba(0,0,0,.6);
+		color:#fff;
+
+	}
+	.main .arrow-left:hover a{
+		background-color:#333;
+		background:rgba(0,0,0,.6);
+		color:#fff;
+	}
+	
+	.main .picture-nav{
+		
+		position: absolute;
+		left: 0;
+		top: 0;
+		width:234px;
+		height: 100%;
+		background-color: #333;
+		background:rgba(0,0,0,.6);
+	}
+	.picture-nav .nav-up{
+		margin-top:20px;
+	}
+	.picture-nav .nav-content a{
+		position: relative;
+		display: block;
+		float: left;
+		width: 100%	;
+		height: 42px;
+		text-indent:2em;
+		line-height: 42px;
+		color:#fff;
+		font-size: 14px;
+
+	}
+	.picture-nav .nav-content:hover a{
+		background-color: #ff6700;
+	}
+
+	.picture-nav .nav-content .fa{
+		display: block;
+		position:absolute;
+		top:15px;
+		left: 200px;
+		text-indent:0em;
+		color:rgba(255,255,255,0.5);
+
+	}
+	/*轮播图下的广告栏*/
+	.main-subnav{
+		position: relative;
+		width: 1226px;
+		height: 200px;
+		margin: 0 auto;
+		margin-top:14px;	
+	}
+	.main-subnav .subnav-left{
+		float: left;
+		width: 234px;
+		height: 170px;
+		background-color: #5F5750;
+		text-align: center;
+	}
+	
+	.main-subnav .subnav-left .subnav-left-menu{
+		float: left;
+		width: 76px;
+		height: 82px;
+		text-align: center;
+
+	}
+	
+
+	.main-subnav .subnav-left .subnav-left-menu .fa{
+		
+		width: 70px;
+		height: 24px;
+		margin-top:20px;
+		font-size: 24px;
+		line-height:24px;
+
+	}
+	.main-subnav .subnav-left .subnav-left-menu a{
+		/*display: block;
+		width: 70px;
+		height: 60px;
+		margin-top:20px;
+		color:#CFCDCB;*/
+		display: block;
+		float: left;
+		width: 70px;
+		height: 70px;
+		font-size: 12px;
+		line-height: 20px;
+		padding: 3px;
+		color:#CFCDCB;
+	}
+	.main-subnav .subnav-right{
+		position: absolute;
+		right: 0;
+		top:0;
+		float: left;
+		margin-left: 14px;
+		
+	}
+	.main-subnav .subnav-right .right-pt{
+		display: block;
+		float: left;
+		margin-left: 14px;
+		width: 316px;
+		height: 170px;
+	
+
+	}
+	.main-subnav .subnav-right .right-pt img{
+		
+		width: 100%;
+		height: 100%;
+	}
+	.subnav-left .subnav-left-menu:hover a{
+		color:#fff;
+	}
+	.shopping-title{
+		position: relative;
+		width: 1226px;
+		height: 58px;
+		margin: 0 auto;
+		font-size: 22px;
+		font-weight: 200;
+		line-height: 58px;
+	}
+	.shopping-title .left,.right{
+
+		width: 36px;
+		height: 24px;
+		border: 1px solid  #e0e0e0;
+		text-align: center;
+		line-height: 24px;
+		
+		font-size: 16px;
+	}
+	.shopping-title .left a, .right a{
+		color:#b0b0b0;
+	}
+	.shopping-title .left a :hover,
+	 .shopping-title .right a:hover{
+		color:#ff6700;
+	}
+	.shopping-title .left{
+		position: absolute;
+		right: 36px;
+		top: 25%;
+	}
+	.shopping-title .right{
+		position: absolute;
+		right: 0;
+		top: 25%;
+	}
+	.shopping-nav{
+		position: relative;
+		width: 1226px;
+		height: 340px;
+		
+		margin: 0 auto;
+	}
+
+	.shopping-nav .commodity{
+		position: absolute;
+		right: 0;
+		top:0;	
+		float: left;
+		width: 992px;
+		height: 339px;
+
+	}
+	.shopping-nav .time{
+		display: block;
+		float: left;
+		width: 234px;
+		height: 339px;
+		text-align: center;
+		line-height: 340px;
+		background-color: #F1EDED;
+		border-top: 1px solid red;
+	}
+	.shopping-nav .commodity .commodity-option{
+		display: block;
+		float: left;
+		margin-left:14px;
+		width: 234px;
+		height: 339px;
+		text-align: center;
+
+
+	}
+	.shopping-nav .commodity .commodity-option img{
+
+		width: 160px;
+		height: 166px;
+	}
+	.shopping-nav .commodity .commodity-option a{
+		display: block;
+		margin-top: 20px;
+		font-size: 12px;
+
+	}
+	.shopping-nav .commodity .commodity-option h3{
+		margin-top:30px;
+		color:#333;
+	}
+	.shopping-nav .commodity .commodity-option p{
+		color:#ADADAD;
+	}
+	.shopping-nav .commodity .commodity-option span{
+		color:red;
+	}
+	.border-top1{
+		border-top:1px solid #FFAC13;
+	}
+	.border-top2{
+		border-top:1px solid #83C44E;
+	}
+	.border-top3{
+		border-top:1px solid #2196F3;
+	}
+	.border-top4{
+		border-top:1px solid #E53935;
+	}
+	
+ 
+
+
+
+
+	</style>
+</head>
+<body>
+	<!-- 标题栏 -->
+	<div class="header">
+		<div class="header-layout">
+			<div class="layout-left">
+			<a href="#">小米商城</a><span>|</span>
+			<a href="#">MIUI</a><span>|</span>
+			<a href="#">loT</a><span>|</span>
+			<a href="#">云服务</a><span>|</span>
+			<a href="#">金融</a><span>|</span>
+			<a href="#">有品</a><span>|</span>
+			<a href="#">小爱开放平台</a><span>|</span>
+			<a href="#">政企服务</a><span>|</span>
+			<a href="#">下载app</a><span>|</span>
+			<a href="#">Select Region</a>
+			</div>
+			<div class="layout-right">
+				<a href="#">登录</a><span>|</span>
+				<a href="#">注册</a><span>|</span>
+				<a href="#">消息通知</a>
+			</div>
+			<div class=layout-alone>
+				<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>购物车</a>
+			</div>
+		</div>
+	</div>
+	<!-- logo栏 -->
+	<div class="headerSection">
+		<div class="logo-s">
+			<a href="#" class="logoS"></a>
+		</div>
+		<div class="logo-m">
+		</div>
+		<div class="headerSection-menu">
+			<a href="#">小米手机</a>
+			<a href="#">红米</a>
+			<a href="#">电视</a>
+			<a href="#">笔记本</a>
+			<a href="#">空调</a>
+			<a href="#">新品</a>
+			<a href="#">路由器</a>
+			<a href="#">智能硬件</a>
+			<a href="#">服务</a>
+			<a href="#">社区</a>
+		</div>
+
+		<div class="headerSection-right">
+			<input type="text" class="textInput">
+			<a href="#" class="inside-text1">小米8</a>
+			<a href="#" class="inside-text2">小米MIX 2S</a>
+			<div class="magnifier">
+				<a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="slide-box"> -->
+	<div class="slide-box active ">
+		<div class="slide-bar">
+		</div>
+	</div>
+	<!-- </div> -->
+	<!-- 主要内容开始 -->
+	<div class="main">
+		<!-- 轮播图 -->
+		<div class="main-box">
+			<img class="main-picture" src="img/mi1.jpg" alt="">	
+			<img class="main-picture" src="img/mi2.jpg" alt="">
+			<img class="main-picture" src="img/mi3.jpg" alt="">
+			<img class="main-picture" src="img/mi4.jpg" alt="">
+			<img class="main-picture" src="img/mi5.jpg" alt="">
+		</div>
+		<!-- 导航栏的隐藏菜单 -->
+		<div class="arrow-left-nav">
+			<ul class="commodity-content">
+			</ul>
+		</div>
+		<!-- 左按钮 -->
+		<div class="arrow-left">
+			<a href="#">
+				<i class="fa fa-chevron-left" aria-hidden="true">
+				</i>
+			</a>
+		</div>
+		<!-- 右按钮 -->
+		<div class="arrow-right">
+			<a href="#">
+				<i class="fa fa-chevron-right" aria-hidden="true">
+				</i>
+			</a>
+		</div>
+		<!-- 导航栏 -->
+		<ul class="picture-nav">
+			<li class="nav-content nav-up">
+				<a class="menu" href="#">手机 电话卡
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">电视 盒子
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">笔记本 平板
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">家电 插线板
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">出行 穿戴
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">智能 路由器
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a href="#">电源 配件
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">健康 儿童
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">耳机 音响
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+			<li class="nav-content">
+				<a class="menu" href="#">生活 箱包
+					<i class="fa fa-chevron-right" aria-hidden="true">
+					</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 轮播图下的广告栏 -->
+	<div class="main-subnav">
+		<ul class="subnav-left">
+
+				<li class="subnav-left-menu">
+					<a href=""><i class="fa fa-mobile" aria-hidden="true">
+					</i>
+					选购手机</a>
+				</li>
+				
+				<li class="subnav-left-menu">
+					<a href=""><i class="fa fa-gift" aria-hidden="true"></i>
+					企业团购</a>
+				</li>
+			
+				<li class="subnav-left-menu">
+					<a href=""><i class="fa fa-gift">F</i>
+					F码通道</a>
+				</li>
+				<li class="subnav-left-menu">
+					<a href=""><i class="fa fa-phone-square" aria-hidden="true"></i>
+					米粉卡</a>
+				</li> 
+			
+				<li class="subnav-left-menu">
+					<a href=""><i class="fa fa-refresh" aria-hidden="true"></i>
+					以旧换新</a>
+				</li>
+				
+				<li class="subnav-left-menu">
+						<a href="">
+							<i class="fa fa-credit-card-alt" aria-hidden="true">
+							</i>
+							话费充值
+						</a>
+				</li>
+				
+		</ul>
+		<ul class="subnav-right">
+			<li class="right-pt">
+				<a href="">
+					<img src="img/xiaomiqingchunban.jpg" alt=""></li>
+				</a>
+			<li class="right-pt">
+				<a href="">
+					<img src="img/hongmi6.jpg" alt=""></li>
+				</a>
+			<li class="right-pt">
+				<a href="">
+					<img src="img/xiaomihuan.jpg" alt=""></li>
+				</a>
+		</ul>
+	</div>
+	<!-- 小米闪购 -->
+	<div class="shopping-title">
+		<span>小米闪购</span>
+		<div class="left">
+			<a href="#">
+				<i class="fa fa-chevron-left" aria-hidden="true">
+				</i>
+			</a>
+		</div>
+		<div class="right">
+			<a href="#">
+				<i class="fa fa-chevron-right" aria-hidden="true">
+				</i>
+			</a>
+		</div>
+	</div>
+	<div class="shopping-nav">
+		<div class="time">
+			<img src="img/flashpurchase.png" alt="">
+		
+		</div>
+		<ul class="commodity">
+			<li class="commodity-option border-top1">
+				<a href="">
+					<img src="img/lanya1yuan.png" alt="">	
+					<h3>小米蓝牙耳机青春版 黑色</h3>
+					<p>6.5 克轻巧,高清通话音质</p>
+					<p><span>1</span>&nbsp;<span>元</span>&nbsp;<del>59元</del></p>
+
+				</a>
+			</li>
+			<li class="commodity-option border-top2">
+				<a href="">
+					<img src="img/erji1yuan.png " alt="">
+				</a>
+			</li>
+			<li class="commodity-option border-top3">
+				<a href="">
+					<img src="img/yinxiang.png" alt="">
+				</a>
+			</li>
+			<li class="commodity-option border-top4">
+				<a href="">
+					<img src="img/zhaoxiangji.png" alt="">
+				</a>
+			</li>
+
+		</ul>
+	</div>
+	
+	<script>
+		console.log(navData)  
+		// 轮播栏的隐藏右拉 
+		var leftNav=document.getElementsByClassName('arrow-left-nav')[0];
+		var mainBox=document.getElementsByClassName('main-box')[0].children;
+		var uls=document.getElemenetsByClassName('commodity-content')[0];
+		 // logo栏隐藏下拉
+		var subNavLis = document.getElementsByClassName('headerSection-menu')[0].children; 	
+		var slideBar = document.getElementsByClassName('slide-bar')[0];
+
+		// 轮播栏的隐藏右拉运行程序
+
+
+
+
+
+		// logo栏隐藏下拉运行程序
+		for(var i = 0 ; i < subNavLis.length ; i++){
+			//直接以属性形式添加  动态添加index属性
+			subNavLis[i].index = i;
+			subNavLis[i].onmouseover = function(){
+				// slideBar.style.display = 'block';
+				addClass(slideBar,'active');
+				//动态生成html
+				// index 那个按钮点击的
+				// el 生成的html给谁插入
+				// data 按照那些数据生成html
+				initDetailList(this.index,slideBar,navData);
+			}
+			subNavLis[i].onmouseleave = function(){
+				// slideBar.style.display = 'none';
+				delClass(slideBar,'active');
+			}
+		}
+
+		function initDetailList(index,el,data){
+			//具体的某一个数据数组
+			// 根据下标获取数组的对应的值
+			var currentData = navData[index];
+			console.log(currentData)
+			var str = '';
+			var str2='';
+			for(var i = 0 ;i  < currentData.length ; i++){
+				// str += '<div style="width:20%;height:100%;float:left;border-right:1px solid gray;"><img src="'+currentData[i].img+'"><p>'+currentData[i].name+'</p></div>';
+				str+='<div class="down  '+'down'+'-'+i+'"><a href=""><img src="'+currentData[i].img+'"><p>'+currentData[i].name+'</p></a></div>';
+				// str2='<div class="down border-right-none"><a class="down-a" href=""><img src="'+(currentData.length-1).img+'"><p>'+(currentData.length-1).name+'</p></a></div>';
+
+			}
+			el.innerHTML = str;
+
+		}
+
+
+		
+
+
+	</script>
+	
+		
+
+			
+</body>
+</html>

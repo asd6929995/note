@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			position: relative;
+			width: 600px;
+			height: 600px;
+			background-color: pink;
+			margin: 100px auto;
+			
+		}
+		.d1{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			cursor: move;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="d1"></div>
+	</div>
+	<script>
+	var d1El=document.getElementsByClassName('d1')[0];
+	var boxEl=document.getElementsByClassName('box')[0];
+	//求最大位移区域
+	
+	
+	//鼠标的点击的位置
+
+	d1El.onmousedown=function(){
+		//计算鼠标初始位置
+		var boxelW=boxEl.scrollWidth;
+		var d1ElW=d1El.scrollWidth;
+		var boxelH=boxEl.scrollHeight;
+		console.log(boxelH);
+		var  d1ElH=d1El.scrollHeight;
+		console.log(d1ElH);
+		var startX=event.pageX-d1El.offsetLeft;
+		var startY=event.pageY-d1El.offsetTop;
+			document.onmousemove=function(){
+				var a=event.pageX-startX;
+				var b=event.pageY-startY;
+				// if (a<0) {
+				// 	d1El.style.left='0';
+				// }else if(a>boxelW-d1ElW){
+				// 	d1El.style.left=(boxelW-d1ElW)+'px';
+				// }else{
+				// 	d1El.style.left=a+'px';
+				// }
+				// if (b<0) {
+				// 	d1El.style.top='0';
+				// }else if(b>boxelH-d1ElH){
+				// 	d1El.style.top=(boxelH-d1ElH)+'px';
+				// }
+				// else{
+				// 	d1El.style.top=b+'px';
+				// }
+				if (a<0) {
+					a ='0';
+				}else if(a>boxelW-d1ElW){
+					a=boxelW-d1ElW;
+				}
+				d1El.style.left=a+'px';
+				if (b<0) {
+					b='0';
+				}else if(b>boxelH-d1ElH){
+					b=boxelH-d1ElH;
+				}
+				
+				d1El.style.top=b+'px';
+			}
+			d1El.onmouseup = function(){
+				document.onmousemove = null;
+			}
+			
+	}
+	
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title><style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box1{
+			position: relative;
+			width: 400px;
+			height: 400px;
+			margin: 100px auto;
+			border:20px solid purple;
+			background-color: pink;
+		}
+		.box2{
+			position: absolute;
+			left: 30px;
+			top: 30px;
+			width: 300px;
+			height: 300px;
+			background-color: green;
+			border:20px solid purple;
+		}
+		.box3{
+			position: absolute;
+			left: 22px;
+			top: 22px;
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			border:20px solid purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="box2">
+			<div class="box3"></div>
+	</div> 
+	</div>
+	<script>
+	var box3El=document.getElementsByClassName('box3')[0];
+	var box2Left=bodyLeft(box3El,true);
+	console.log("box3El.left===>"+box2Left);
+	function bodyLeft(el,isFisrt){
+		var cunrrenLeft=isFisrt?el.offsetLeft:(el.offsetLeft+(el.offsetWidth-el.scrollWidth)/2)//判断父类盒子是否存在边框
+		if (el.offsetParent.tagName=='BODY') {
+			return cunrrenLeft;
+		}
+		return cunrrenLeft+bodyLeft(el.offsetParent,false);
+	}
+
+	</script>
+</body>
+</html>

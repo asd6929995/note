@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.d1{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			/*修改鼠标样式*/
+			cursor: move;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1">
+		
+	</div>
+	<script>
+	var d1El=document.getElementsByClassName('d1')[0];
+	d1El.onmousedown=function(event){
+		var startX=event.pageX-d1El.offsetLeft;
+		console.log(startX);
+		var startY=event.pageY-d1El.offsetTop;
+			console.log(startY);
+		document.onmousemove=function(event){
+			d1El.style.left=(event.pageX-startX)+'px';
+			console.log(d1El.style.left);
+			d1El.style.top=(event.pageY-startY)+'px';
+				console.log(d1El.style.top);
+		}
+		d1El.onmouseup=function(){
+			document.onmousemove = null;
+		}
+	}
+
+
+	</script>
+</body>
+</html>

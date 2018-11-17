@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<ul id="ul1">
+	
+	<li>li_1</li>
+	<li>li_2</li>
+	<li>li_3</li>
+	<li>li_4</li>
+	<li>li_5</li>
+	<li>li_6</li>
+	<li>li_7</li>
+	<li>li_8</li>
+</ul>
+<script>
+var ul1=document.getElementById('ul1');
+var lis=myChildren(ul1);
+var li_3=lis[3];
+li_3.style.backgroundColor='green';
+function myChildren(pNode) {
+	var eles=pNode.children;
+	var rs=[];
+	for (var i = 0; i<eles.length; i++) {
+		rs.push(eles[i]);
+	}
+	return rs;
+}
+
+
+</script>
+
+</body>
+</html>

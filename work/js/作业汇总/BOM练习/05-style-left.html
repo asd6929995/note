@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.d2{
+			width: 300px;
+			height: 200px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="d1" style="width: 200px;height: 200px;background: green">
+		
+	</div>
+	<div class="d2">
+		
+	</div>
+<script>
+	var d1El=document.getElementsByClassName('d1')[0];
+	var d2El=document.getElementsByClassName('d2')[0];
+	console.log(d1El.offsetWidth);
+	console.log(d1El.style.width);
+	console.log('==============================');
+	console.log(d2El.offsetWidth);
+	
+	console.log(d2El.style.width);
+
+
+</script>
+	
+</body>
+</html>

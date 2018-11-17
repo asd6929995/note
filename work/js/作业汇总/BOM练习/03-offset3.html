@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.d1{
+		position: relative;
+		width: 300px;
+		height: 200px;
+		background-color:red;
+		margin: 0px;
+		padding: 60px;
+	}
+	.d2{
+		position: absolute;
+		left: 0;
+		top: 200px;
+		width: 200px;
+		height: 100px;
+		background-color: green;
+	}
+
+
+</style>
+
+</head>
+<body>
+	<div class="d1">
+		<div class="d2">
+		</div>
+	</div>
+	<script>
+	var d1El=document.getElementsByClassName('d1')[0];
+	console.log('d1El.offsetWidth===>'+d1El.offsetWidth);
+	console.log('d1El.offsetHeight==>'+d1El.offsetHeight);
+	console.log('d1El.offsetLeft==>'+d1El.offsetLeft);
+	console.log('d1El.offsetTop==>'+d1El.offsetTop);
+    var d2El=document.getElementsByClassName('d2')[0];
+    console.log('d2El.offsetLeft==>'+d2El.offsetLeft);
+    console.log('d2El.offsetTop==>'+d2El.offsetTop);
+    console.log('============================');
+  //   console.log('d2El.offsetParent ===>');
+ 	// console.log(d2El.offsetParent);
+ 	var b=position(d2El)
+ 	console.log(b)	;	
+	
+
+	function position(el){
+		function bodyLeft(el){
+			if (!el.offsetParent) {
+				return el.offsetLeft;
+			}
+			return el.offsetLeft+bodyLeft(el.offsetParent);
+		}
+		function bodyTop(el){
+			if (!el.offsetParent) {
+				return el.offsetTop;
+			}
+			return el.offsetTop+bodyTop(el.offsetParent);
+		}
+		return{
+			left: bodyLeft(el),
+			top: bodyTop(el)
+			} 	
+		}
+
+
+
+	</script>
+</body>
+</html>

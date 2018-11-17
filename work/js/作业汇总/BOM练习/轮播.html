@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.banner{
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 400px;
+			height: 300px;
+			margin: 100px auto;
+			border: 10px solid red;
+			overflow: hidden;
+		}
+		.imgs{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 600%;
+			height: 100%;
+		}
+		.imgs .li-item{
+			float: left;
+			width: 400px;
+			height: 100%;
+		}
+		.imgs .li-item img{
+			width: 100%;
+			height: 100%;
+		}
+		.arr{
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 36px;
+			height: 72px;
+			margin-top: -36px;
+			line-height: 72px;
+			text-align: center;
+			font-size: 20px;
+			color:#fff;
+			text-decoration: none;
+			background-color: rgba(0,0,0,.5);
+		}
+		.arr.arr-right{
+			left: auto;
+			right: 0;
+		}
+		.dotts{
+			position: absolute;
+			left: 20px;
+			bottom: 50px;
+			height: 20px;
+		}
+		.dotts .dott-item{
+			float: left;
+			width: 20px;
+			height: 100%;
+			background-color: red;
+			margin-right: 20px;
+			/*css3属性 圆形*/
+			border-radius: 50%;
+		}
+		.dotts .dott-item.active{
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<ul class="imgs">
+			<li class="li-item"><img src="img/m1.jpg" alt=""></li>
+			<li class="li-item"><img src="img/pro-m1.png" alt=""></li>
+			<li class="li-item"><img src="img/pro-m2.png" alt=""></li>
+			<li class="li-item"><img src="img/pro-m3.png" alt=""></li>
+			<li class="li-item"><img src="img/tv-2.png" alt=""></li>
+			<li class="li-item"><img src="img/m1.jpg" alt=""></li>
+		</ul>
+		<a onclick="goNext(false);" href="javascript:;" class="arr arr-left"><</a>
+		<a onclick="goNext(true);" href="javascript:;" class="arr arr-right">></a>
+		<ul class="dotts">
+			<!-- <li class="dott-item" onclick="go(0);"><a href="javascript:;"></a></li>
+			<li class="dott-item active" onclick="go(1);"><a href="javascript:;"></a></li>
+			<li class="dott-item"><a href="javascript:;"></a></li>
+			<li class="dott-item"><a href="javascript:;"></a></li> -->
+		</ul>
+	</div>
+	<script src="js/util.js"></script>
+	<script>
+	var timer=null;
+	var timet=null;
+	var imgsEl=document.getElementsByClassName('imgs');
+	//选择图片的父级盒子
+	var liw=document.getElementsByClassName('li-item')[0].offsetWidth;
+	//单个图片的宽度
+	var count=0;//计时器归0
+	initDotts();//自动添加圆点
+	 autoPlay ();
+	
+	bannerEl.onmouseenter = function  () {
+			console.log('jinlaile...');
+			// 清除定时器
+			clearInterval(timer2);	
+	}
+		// onmouseleave 鼠标离开触发
+	bannerEl.onmouseleave = function  () {
+			console.log('likaile...');
+			//重新开启轮播
+			autoPlay();
+	}
+
+	function goNext (isRight) {
+			if(isRight){
+				count ++;
+			}else{
+				count -- ;
+			}
+			go(count);
+	}
+	function initDotts(){
+	
+		var dottsEl=document.getElementsByClassName('dotts')[0];
+		var str='';
+		for (var i =0; i<imgsEl.length-1; i++) {
+			str+='<li onclick="go('+i+');" class="dott-item '+(i==0?'active':'')+'"><a href="jsvascript:;"></a></li>';
+		}
+		dottsEl.innerHtml=str;
+	}	//自动添加函数
+	function animate(el,target){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			var leader= el.offsetLeft;
+			var step=(target-leader)/10;
+			if (step<1&&step>0) {
+				step=1;
+			}else if(step>-1&&step<0){
+				step=-1;
+			}
+			el.style.left=(leader+step)+'px';
+			if (tatget==leader) {
+				el.style.left=target+'px';
+				clearInterval(timer);
+			}
+		},17)
+	}//图片轮播函数
+	function go(count){
+		window.count=count;
+		if (count==imgsEl.children.length) {
+			window.count=1;
+			imgsEl.style.left='0';
+		}
+		if (count<0) {
+			imgsEl.style.left=-1*(imgsEl.children.length-1)*liw+'px';
+			window.count=imgsEl.children.length-2;
+		}
+		var target=-1*window.count*liw;
+		handleDottActive(window.count);
+		animate(imgsEl,target);
+	}
+	function handleDottActive(index){
+		if (index==imgsEl.children.length-1) {
+			index=0;
+		}
+		var dottsEl=document.getElementsByClassName('dotts')[0];
+		for (var i =0; i <dottsEl.children.length; i++) {
+			delClass(dottsEl.children[i],'active');
+		}
+		addClass(dottsEl.children[index],'active');
+	}
+	function autoPlay () {
+			// 	// 每次移动的target跟次数有关系
+			timer2 = setInterval(function(){
+				count ++;
+				go(count);
+			},2000);
+		}
+
+
+	</script>
+	
+</body>
+</html>

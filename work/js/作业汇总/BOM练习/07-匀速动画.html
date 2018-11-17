@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.d1{
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		background-color: red;
+	}
+	.btn1{
+		margin-top:200px;
+	}
+
+</style>
+</head>
+<body>
+	<div class="d1">
+	</div>
+	<button class="btn1">跳到400px</button>
+	<button class="btn2">跳到800PX</button>
+	<script>
+	var d1El=document.getElementsByClassName('d1')[0];
+	var btn1=document.getElementsByClassName('btn1')[0];
+	var btn2=document.getElementsByClassName('btn2')[0];
+	var a=405;
+	var b=800;
+	var timer=null;
+	btn1.onclick=function(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+
+			var c=a>d1El.offsetLeft?10:-10;
+			
+			
+			d1El.style.left=(d1El.offsetLeft+c)+'px';
+				var cha=a-d1El.offsetLeft
+			 if (Math.abs(cha)<Math.abs(c)) {
+				d1El.style.left=a+'px';
+
+				clearInterval(timer);
+			}
+		},50);
+	
+
+	}
+	btn2.onclick=function(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			
+			var f=b>d1El.offsetLeft?10:-10;
+			d1El.style.left=(d1El.offsetLeft+f)+'px';
+			var cha1=b-d1El.offsetLeft
+			 if (Math.abs(cha1)<Math.abs(f)) {
+				d1El.style.left=b+'px';
+				clearInterval(timer);
+			}
+			
+		},50)
+		
+	}
+
+
+
+
+	</script>
+</body>
+</html>

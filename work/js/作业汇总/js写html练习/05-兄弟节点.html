@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+
+	<style>
+	.box{
+		width: 200px;
+		height: 200px;
+		background-color: green;
+	}
+	.box2{
+		width: 200px;
+		height: 200px;
+		background-color: pink;
+	}
+
+
+</style>
+</head>
+
+<body>
+	<div class="box" id="box1">
+		box
+	</div>
+	<div class="box2">
+		box2
+	</div>
+	<script>
+		var box=document.getElementById('box1');
+		var box2=box.nextElementSibling||box.nextSibling;
+		box2.onclick= function(){
+			box2.style.backgroundColor='red';
+		}
+	</script>
+
+
+</body>
+</html>

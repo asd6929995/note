@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+</head>
+<body>
+	<ul id="ul1">
+	<li>li_1</li><li>li_2</li>
+	<li>li_3</li>
+	<li>li_4</li>
+	<li>li_5</li>
+	</ul>
+	<script>
+	var ul1= document.getElementById('ul1');
+	var liNodes=ul1.childNodes;
+	for (var i = 0; i <liNodes.length; i++) {
+		console.log(liNodes[4].nodeType);
+		
+	}
+
+
+
+	</script>
+</body>
+</html>

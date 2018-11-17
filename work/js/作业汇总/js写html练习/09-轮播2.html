@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.box{
+	position: relative;
+	width: 1200px;
+	height: 700px;
+	background-color: pink;	
+	margin-left: 15%;
+	overflow: hidden;
+}	
+
+
+.imgBox{
+	
+	width:100%;
+	height: 100%;
+
+
+}
+
+.p1{
+		position: absolute;
+		left: 0px;
+		top:250px;
+		width: 100px;
+		height:100px;
+		margin-top:-20px;
+		opacity:0.5;
+
+	}
+	.p2{
+		position:absolute;
+		right:0;
+		top:250px;
+		width: 100px;
+		height:100px;
+		opacity:0.5;
+
+	}
+	
+</style>
+<body>
+	<div class="box">
+
+	<img class="imgBox" src="img/a.jpg" alt="">
+<!-- 	<ul class="blue">
+	</ul> -->
+	<img class="p1" src="img/切换左图标.png" alt="" onclick="asd(true);">
+	<img class="p2" src="img/切换右图标.png" alt="" onclick="asd(false);">
+
+	</div>
+	<script>
+	var imgs=['a.jpg','sjl.jpg','hulk.jpg','钢铁侠.jpg','m1.jpg','m2.jpg','m3.jpg','m4.jpg'];
+	var imgBox=document.getElementsByClassName('imgBox')[0];
+	// sort(imgBox,imgs);
+	var box=document.getElementsByClassName('Box')[0];
+	var p1=document.getElementsByClassName('p1')[0];
+	var p2=document.getElementsByClassName('p2')[0];
+
+	var p3=
+	console.log(p3);
+	var a=0;
+	function asd(x){
+		if (x) {
+			if(a==0){
+				a=imgs.length-1;
+			}else{
+				a--;
+			}
+		}else{
+			if(a==imgs.length-1){
+				a=0;
+			}else{
+				a++;
+			}
+		}
+		imgBox.src='img/'+imgs[a];
+	}
+
+
+
+
+
+
+
+
+
+
+
+// function sort(x,y){
+// 			// 建立封包函数，将图片加入目标区域
+// 			var str='';
+// 			for (var i = 0; i<y.length; i++) {
+// 				str += '<li class="img-item"><img src="img/'+y[i]+'" alt=""></li>';
+			
+// 			}
+// 			x.innerHTML=str;
+// 		}
+		
+
+	</script>
+</body>
+</html>

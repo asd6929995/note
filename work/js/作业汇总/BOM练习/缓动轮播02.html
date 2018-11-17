@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		.banner{
+			position: relative;
+			left: 0;
+			top: 0;
+			width: 600px;
+			height: 400px;
+			margin: 100px auto;
+			border: 10px solid red;
+			
+		}
+		.imgs{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 500%;
+			height: 100%;
+		}
+		.imgs .li-item{
+			float: left;
+			width: 600px;
+			height: 100%;
+		}
+		.imgs .li-item img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="banner">
+		<ul class="imgs">
+			<li class="li-item"><img src="img/m1.jpg" alt=""></li>
+			<li class="li-item"><img src="img/pro-m1.png" alt=""></li>
+			<li class="li-item"><img src="img/pro-m2.png" alt=""></li>
+			<li class="li-item"><img src="img/pro-m3.png" alt=""></li>
+			<li class="li-item"><img src="img/tv-2.png" alt=""></li>
+		</ul>
+	</div>
+	<button class="btn1">开始轮播</button>
+	<script>
+	var banner=document.getElementsByClassName('banner')[0];
+	var uls=document.getElementsByClassName('imgs')[0];
+	var btn1=document.getElementsByClassName('btn1')[0];
+
+	btn1.onclick=function(){
+		
+	}
+
+
+
+	</script>
+</body>
+</html>

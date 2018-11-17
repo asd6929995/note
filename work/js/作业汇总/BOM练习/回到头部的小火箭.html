@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.btn{
+			display: block;
+			position: fixed;
+			right: 100px;
+			bottom: 200px;
+		}
+		.footer{
+			width: 100%;
+			height: 200px;
+			background-color: #000;
+			margin-top: 1800px;
+		}
+	</style>
+</head>
+<body>
+		<div class="footer">
+		
+	</div>
+	<button class="btn">回到头部</button>
+	<script>
+	var timer=null;
+	var btn=document.getElementsByClassName('btn')[0];
+	btn.onclick=function(){
+		animate(180);
+	}
+	function animate(target){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			var leader=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop||0;
+			var step=(target-leader)/10;
+			if (step<1&&step>0) {
+				step=1;
+			}else if (step>-1&&step<0) {
+				step=-1;
+			}
+			document.documentElement.scrollTop=leader+step;
+			if (target==leader) {
+				document.documentElement.scrollTop=leader+step;
+				clearInterval(timer);
+
+			}
+		},17);
+	}
+	</script>
+</body>
+</html>

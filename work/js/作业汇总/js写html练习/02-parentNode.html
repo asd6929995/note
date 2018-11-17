@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.box{
+		position: relative;
+		width: 400px;
+		height: 400px;
+		background-color:pink;
+	}
+	.box .innerBox{
+		position: absolute;
+		width: 200px;
+		height: 200px;
+
+		background-color: green;
+		z-index: 99;
+	}
+
+
+	</style>
+	
+</head>
+<body>
+	<div class="box" >
+		<div class="innerBox" >
+		</div>
+	</div>
+	<button class="btn">恢复</button>
+
+<script>
+		var innerBox=document.getElementsByClassName("innerBox")[0];
+	
+		var pNode=innerBox.parentNode;
+		
+		var btn=document.getElementsByClassName("btn")[0];
+
+		innerBox.onclick=function(){
+				if (pNode.style.backgroundColor=='pink') {
+					pNode.style.backgroundColor='red';
+
+				}else {
+					pNode.style.backgroundColor='pink';	
+
+				}
+
+			}
+
+				
+			
+
+
+		btn.onclick = function(){
+			pNode.style.backgroundColor='pink';
+		}
+	
+
+
+	</script>
+</body>
+</html>
