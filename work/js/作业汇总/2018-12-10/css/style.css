@@ -1,0 +1,326 @@
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+
+/**													**
+*						左边的导航					 *
+**													**/
+.sideBar{
+	position: fixed;
+	left: 0;
+	top: 0;
+	float: left;
+	width: 220px;
+	height: 100%;
+	font-size: 16px;
+    color: #999;
+    text-align: center;
+    box-shadow: 1px 0 10px 0 rgba(106, 149, 200, 0.21);
+}
+.sideBar .logo{
+	position: relative;
+	width: 100%;
+    height: 160px;
+	background: url(../img/LOGO.png) no-repeat;
+	background-size: 65%;
+	background-position: 50%;
+}
+.sideBar .logo-a{
+	position: absolute;
+	left:20px;
+	top: 25%;
+	width: 176px;
+	height: 86px;
+}
+.sideBar .logo a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.sideBar .sideBar-menu{
+	position: relative;
+	width: 100%;
+}
+.sideBar-menu .label{
+	width: 100%;
+	font-size: 16px;
+	line-height: 27px;
+	text-align: center;
+	margin-top: 24px;
+	
+}
+.label .label-a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #9D9D9D;
+}
+.sideBar-menu .label .active2{
+	color:#0D71FF;
+}
+.sideBar .bar{
+	position: absolute;
+	left: 50px;
+    /*top: -10px;*/
+	width: 4px;
+	height: 390px;
+    /*background-color: #ECF2F7;*/
+    background-image: -webkit-linear-gradient(top,#ECF2F7,#7C7F81,#ECF2F7);
+    border-radius: 4px;
+}
+.bar .bar-ball{
+	position: absolute;
+	left: -6px;
+    top:0px;
+	width: 12px;
+	height: 12px;
+	background-color: #0D71FF;
+	border: 2px solid #CFE3FF;
+	border-radius: 12px;
+}	
+
+/**													**
+*						主要部分						 *
+**													**/
+ 
+.right-box{
+	float: left;
+	width: 100%;
+	/*background-color: #F2F4F7;*/
+	padding-left: 220px;
+	box-sizing :border-box; 
+}
+
+/*=====================标题========================*/
+.right-box .header{
+	float: left;
+	width: 100%;
+	height: 60px;
+	background-color:#EBF0F6;
+	font-size: 16px;
+	line-height: 62px;
+	border-bottom: 1px solid #D8E3EA;
+}
+.right-box .header .left-icon{
+	display: block;
+	float: left;
+	height: 100%;
+    margin-left: 25px;
+    font-size: 16px;
+    color: #333333;
+    text-indent: 40px;
+    line-height: 60px;
+    background: url(../nav-img/home.png) no-repeat 0 15px;
+    background-size: 32px 32px;
+    text-align: center;
+}
+.right-box .header .left-icon a{
+	display: block;
+	float: left;
+	margin-left: 0px;
+
+}
+.right-box .header .right-icon{
+	position: relative;
+    display: block;
+	float: right;
+    width: 26px;
+    height: 26px;
+  	margin-top: 17px;
+    margin-right: 70px;
+    background: url(../nav-img/share.png) no-repeat;
+}
+.right-box .header .right-icon .qr-code{
+  	position: absolute;
+  	display: none;
+	right: 28px;
+	top: 28px;
+	width: 140px;
+	height: 140px;
+	background:url(../nav-img/qr.png) no-repeat;
+	background-size: 100%;
+}
+.right-box .header .left-logo{
+	display: none;
+	float: left;
+	margin-left: 15px;
+	width: 114px;
+	height: 100%;
+	background: url(../img/LOGO.png) no-repeat 0 50%;
+	background-size: 90%;
+}
+.right-box .header .right-icon2{
+	position: relative;
+	display: none;
+	float: right;
+	width: 60px;
+	height: 100%;
+	cursor:pointer;
+}
+.right-box .header .right-icon2 .stripes{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 30px;
+	height:2px;
+	margin-left:-15px;
+	background-color: #888;
+    border-radius: 2px;
+	transition: all ease 0.4s;
+}
+.right-box .header .right-icon2 .stripes-1{
+	margin-top:-7.5px;
+}
+.right-box .header .right-icon2 .stripes-2{
+	margin-top: 0;
+}
+.right-box .header .right-icon2 .stripes-3{
+	margin-top: 7.5px;
+}
+.right-box .header .right-icon2 .stripes.active{
+ 	transform: rotate(0deg);
+}
+
+
+
+
+/*=====================内容========================*/
+
+.main-content{
+	float: left;
+	width: 100%;	
+	height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #F2F4F7;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing :border-box; 
+    overflow: hidden;
+
+}
+.main-content .layout{
+	width: 100%;
+	margin: 20px auto;
+	padding: 15px 25px;
+	padding-bottom: 20px;
+	background-color: #FFFFFF;
+	box-sizing: inherit; 
+
+}
+.main-content .layout:after{
+	content:".";
+	clear:both;
+	display:block;
+	height:0; overflow:hidden; 
+	visibility:hidden;
+}
+.main-content .layout .ct-title{
+	float: left;
+	width: 100%;
+	height: 100%;
+	line-height: 44px;
+	text-indent: 40px;
+	font-size: 18px;
+	border-bottom: 2px solid #F2F4F7;
+
+}
+.main-content .layout  .li-ly{
+	float: left;
+	width: 100%;
+}
+.main-content .layout .li-item{
+	position: relative;
+	top: 0;
+	float: left;
+	width: 25%;
+	height: 105px;
+    min-height: 1px;
+    margin-top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    box-sizing: border-box; 
+	transition: all ease .4s;
+}
+
+.main-content .layout .li-item .button{
+	display: block;
+	width: 100%;
+	height: 80px;
+	border: 1px solid #f2f4f7;
+    border-radius: 4px;
+    padding-left: 74px;
+    margin-top: 25px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: all ease .2s;
+}
+.layout .li-item .button .p1{
+    line-height: 18px;
+    margin-top: 16px;
+	color: #444444;
+	font-size: 14px;
+}
+.layout .li-item .button .p2{
+	color: #a1a7b6;
+	font-size: 12px;
+    line-height: 16px;
+    margin-top: 3px;
+}
+/**													**
+*						自适应，动画等				 *
+**													**/
+@media(max-width: 1336px){
+	.main-content .layout .li-item{
+		width: 50%;
+	}
+}
+@media(max-width: 1280px){
+	.right-box{
+		padding-left: 0px;
+		box-sizing :border-box; 
+	}
+	.sideBar{
+		display: none;
+	}
+	.main-content .layout .li-item{
+		width:50%;
+	}
+	.right-box .header .left-logo{
+		display: block;
+	}
+	.right-box .header .right-icon2{
+		display: block;
+	}
+	.right-box .header{
+		background-color:#fff;
+	}
+		.right-box .header .left-icon{
+		display: none;
+	}
+	.right-box .header .right-icon{
+		display: none;
+	}
+
+}
+@media(max-width: 768px){
+	.main-content .layout .li-item{
+		width: 100%;
+	}
+
+}
+
+.main-content .layout .li-item:hover{
+	top: -5px;
+}
+.main-content .layout .li-item:hover a{
+	
+	border-bottom: 3px solid #F2F4F7;
+}
+.right-box .header .right-icon:hover .qr-code{
+	display: block;
+}

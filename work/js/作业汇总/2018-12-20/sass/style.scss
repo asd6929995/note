@@ -1,0 +1,416 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background-color: #F2F4F5;
+	font-family: PingFangSC-Regular;
+}
+@function ratio($px) {
+  @return $px/75+rem;
+}
+.header{
+	position: fixed;
+ 	top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	float: left;
+	width: 100%;
+	height: ratio(80);
+	background-color:#FFFFFF;
+	font-size:ratio(26);
+	color:#9D9E9E; 
+	line-height: ratio(80);
+	letter-spacing: ratio(4.12);
+	z-index: 999;
+	.header-left{
+		float: left;
+		display: block;
+		width: ratio(211);
+		height: 100%;
+		background: url(../img/logo.jpg) no-repeat;
+		background-size: 100%;
+	}
+	.header-right{
+		position: relative;
+		float: right;
+		width: ratio(100);
+		height: 100%;
+		margin: 0 auto;
+		cursor:pointer;
+		.stripes{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: ratio(40);
+			height:ratio(4);
+			margin-left:ratio(-15);
+			background-color: #888;
+		    border-radius: ratio(2);
+			transition: all ease 0.4s;
+		}
+		.menu-let{
+			margin-top:ratio(-10);
+		}
+		.menu-mid{
+			margin-top: 0;
+		}
+		.menu-rit{
+			margin-top:ratio(10);
+		}
+		.active{
+			transform: rotate(0deg);
+		}
+	}
+	.drop-down{
+		position: absolute;
+		top: ratio(-754);
+		width: 100%;
+		height: ratio(754);
+		background-color: #ffffff;
+		text-align: center;
+		font-size: ratio(26);
+		color:  #3D3D3D;
+		padding-top: ratio(42);
+		padding-bottom: ratio(42);
+		box-sizing: border-box;
+		line-height:  ratio(85);
+		transition: all ease 0.4s;
+		a{
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.header-logo{
+	float: left;
+	margin-top:  ratio(80);
+	width: 100%;
+	height: ratio(422);
+}
+.main{
+	float: left;
+	width: 100%;
+	
+	.title{
+		width: 100%;
+		height: ratio(152);
+		/*background-color: red;*/
+		text-align: center;
+		margin: 0 auto;
+		.title-1{
+			width: ratio(139);
+			height: ratio(90);
+			font-size: ratio(32);
+			line-height: ratio(127.5);
+			letter-spacing: ratio(2);
+			margin: 0 auto;
+			color: #3D3D3D;
+			border: ratio(4) solid #C000FF;
+			border-image:-webkit-linear-gradient(left,#C000FF,#00C7EF) 0 0 20 0; /*Opera11*/
+		}
+		.title-2{
+			width: ratio(139);
+			font-size: ratio(24);
+			color:#9D9E9E; 
+			margin:  ratio(4) auto;
+
+		}
+	}
+}
+
+.hot{
+	float: left;
+	width: 100%;
+	margin-top: ratio(74);
+	font-size: ratio(28);
+
+		.UI-H5{
+			width: 100%;
+			height:ratio(300);
+			padding-left: ratio(46);
+			padding-right: ratio(46);
+			box-sizing: border-box;
+			text-align: center;
+			padding-left: ratio(46);
+			padding-right: ratio(46);
+			box-sizing: border-box;
+				.hot-title{
+					color: #ffffff;
+					font-weight: bold;
+					padding-top: ratio(34);
+					letter-spacing: ratio(2);
+					line-height: ratio(50);
+					font-size:ratio(36);
+				}
+
+			
+				.hot-ct{
+					font-size: ratio(28);
+					color: #FFFFFF;
+					line-height:ratio(40); 
+					letter-spacing: ratio(1);
+					padding-top: ratio(12);
+				}
+				.popup{
+					display: block;
+					margin: ratio(36) auto;
+					text-align: center;
+					line-height:  ratio(50);
+					width:ratio(172);
+					height: ratio(50);
+					border:  ratio(2) solid #FFFFFF;
+					border-radius: ratio(32);
+					color: #fff;
+				}
+		}
+		.UI{
+			background-image: linear-gradient(-133deg, #FF769B 0%, #FFC29C 100%);
+		}
+		.H5{
+			margin:  ratio(30) 0 ratio(30) 0;
+			background-image: linear-gradient(-135deg, #6BBBFF 0%, #B9A7FF 100%);
+			.hot-ct{
+				text-indent: ratio(20)
+			}
+		}
+}
+.popup-box{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.60);
+	z-index: 9999;
+	color: #fff;
+	.pop-box{
+		position: relative;
+		width: ratio(574);
+		height: ratio(450);
+		margin:  ratio(442) auto;
+		padding-right: ratio(108);
+		padding-left:ratio(108);
+		font-size:  ratio(30);
+		line-height: ratio(46); 
+		box-sizing: border-box;
+		background-image: linear-gradient(137deg, #5897FF 0%, #B688FF 100%);
+		border-radius:ratio(8);
+		p:first-child {
+			float:left;
+			margin-top: ratio(100); 
+			margin-bottom:  ratio(22); 
+			font-size:  ratio(36);
+		}
+		p{
+			float: left;
+		}
+		.close{
+			position: absolute;
+			right: 0;
+			top: ratio(-92);
+			width:ratio(60);
+			height: ratio(60);
+			text-align: center;
+			font-size: ratio(36);
+			border-radius: ratio(60);
+			line-height: ratio(60);
+			color:#6D6D6E ;
+			background-color: #FFFFFF;
+		}
+		.rectangle{
+			position: absolute;
+			right: ratio(28);
+			top:  ratio(-32);
+			width: ratio(4);
+			height: ratio(32);
+			background-color:#FFFFFF;
+
+		}
+	}
+}
+
+.box-UI{
+	display: none;
+	.pop-box{
+		background-image: linear-gradient(137deg, #FF4A5A 0%, #FFCB8A 100%);
+	}
+}
+.box-H5{
+	display: none;
+}
+.main1{
+	.header-img{
+		width: 100%	;
+		height: ratio(358);
+		background:url(../img/header_2.jpg) no-repeat;
+		background-size: 100%;
+	}
+	.header-content{
+		width: 100%;
+		margin-top: ratio(26);
+		height:ratio(280);
+		font-size: ratio(28);
+		color: #6D6D6E;
+		letter-spacing: 0;
+		line-height: ratio(40);
+		padding-left: ratio(46);
+		padding-right: ratio(46);
+		box-sizing: border-box;
+	
+	}
+}
+.main2{
+	height:ratio(1108);
+	background:#3D3D3D url(../img/Course.jpg) no-repeat;
+	background-size: 75%;
+	background-position: ratio(92) ratio(160);
+}
+.main3{
+	.design{
+		width: 100%;
+		height: ratio(1900);
+		padding-left: ratio(30);
+		padding-right: ratio(30);
+		box-sizing: border-box;
+		overflow: hidden;
+		.swiper-container {
+	   	  	width: 100%;
+	     	height: 100%;
+	      	.swiper-slide {
+	      		 width: ratio(618);
+			     text-align: center;
+	     		font-size:ratio(36);
+					/* Center slide text vertically */
+			      display: -webkit-box;
+			      display: -ms-flexbox;
+			      display: -webkit-flex;
+			      display: flex;
+			      -webkit-box-pack: center;
+			      -ms-flex-pack: center;
+			      -webkit-justify-content: center;
+			      justify-content: center;
+			      -webkit-box-align: center;
+			      -ms-flex-align: center;
+			      -webkit-align-items: center;
+			      align-items: center;
+			      .img-box{
+			      		margin-top:ratio(-187.5);
+						width: 100%;
+					 .sw-img{
+				      	display: block;			      	width: 100%;
+						height: ratio(344);
+						margin-bottom: ratio(18);
+				      }
+				   
+			  }
+		    }
+		}
+	    .swiper-pagination-bullet{
+	    	width: ratio(30);
+	    	height: ratio(4);
+	    	background: #3683FF;
+			border-radius:ratio(25.6);
+	    }
+	}
+}
+.employment-1,
+.employment-2,
+.employment-3{
+	width: 100%;
+}
+.employment-2{
+	margin: ratio(10) 0 ratio(10) 0;
+}
+.main5{
+	.teacher-img{
+		padding-left:ratio(80);
+		padding-right: ratio(80); 
+		box-sizing: border-box;
+		.swiper-container{
+			.swiper-wrapper{
+				.swiper-slide{
+					.img-box{
+						width: 100%;
+						height: ratio(720);
+						.sw-img{
+							display: block;
+							width: 100%;
+						}
+					}
+				}
+			}
+			.swiper-pagination-bullet{
+			    	width: ratio(30);
+			    	height: ratio(4);
+			    	background: #3683FF;
+					border-radius:ratio(25.6);
+		    }
+		}
+		
+	}
+}
+.main6{
+	.superiority{
+		float: left;
+		margin-left:ratio(30); 
+		margin-right:ratio(30);
+		box-sizing: border-box; 
+		margin-top: ratio(20);
+		height: ratio(210);
+
+		.captions{
+			padding-left: ratio(160);
+			box-sizing: inherit; 
+			font-size: ratio(26);
+			.captions1{
+				font-size: ratio(32);
+				color: #333333;
+				font-weight: bold;
+				margin-top: ratio(36);
+				margin-left: ratio(38);
+				line-height: ratio(46);
+			}
+			.captions2{
+				font-size: ratio(26);
+				color: #7A7A7B;
+				margin-left: ratio(38);
+				line-height: ratio(46);
+			}
+		}
+	}
+}
+.main7{
+	height: ratio(910);
+	background-image: linear-gradient( #F4F5F7 50%, #E7E8EA 100%);
+	.contact-us{
+		float: left;
+		display: block;
+		width: 100%;
+	}
+	.consulting{
+		position: relative;
+		float: right;
+		width: ratio(84);
+		height: ratio(84);
+		font-size: ratio(25);
+		color: #fff;
+		background-image: linear-gradient(-145deg, #FC7441 2%, #FFBF2E 100%);
+		border-radius: ratio(84);
+		text-align: center;
+		line-height: ratio(84);
+		margin-right:  ratio(30);
+	}
+	.rockets{
+		position: absolute;
+		right: 0;
+		top: ratio(36+84);
+		width:  ratio(84);
+		height:  ratio(52);
+		text-align: center;
+		line-height:  ratio(52);
+		border-top-left-radius:  ratio(10);
+		border-top-right-radius:  ratio(10);
+		background-image: linear-gradient(-136deg, #3683FF 0%, #7B86FF 100%);
+	}
+}
